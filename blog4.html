@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!--! Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--! Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--! My Css -->
+    <link rel="stylesheet" href="css/blog.css">
+    <!--! Linear Icons CSS -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+    <!--! Prism CSS  -->
+    <link rel="stylesheet" href="css/prism.css">
+    <!--! Font Awesome -->
+    <link rel="stylesheet" href="../fontawesome-free-5.13.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-5.13.0-web/css/v4-shims.min.css">
+    <!--! GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:100,200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,600i,700&display=swap" rel="stylesheet">
+    <title>Azril ardian - Cara Merubah Warna dan Lebar Scrollbar pada Website menggunakan CSS</title>
+</head>
+
+<body>
+    <a id="button" href="#blog-jumbotron" class="page-scroll"><span class="lnr lnr-chevron-up"></span</a>
+    <!--! NAVBAR
+                -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" class="page-scroll">AZRIL ARDIAN</a>
+            </div>
+            <ul>
+                <li><a href="index.html#section-two" class="page-scroll">FEATURES</a></li>
+                <li><a href="index.html#section-three" class="page-scroll">SKILLS</a></li>
+                <li><a href="index.html#section-four" class="page-scroll">SERVICES</a></li>
+                <li><a href="index.html#section-five" class="page-scroll">PORTFOLIO</a></li>
+                <li><a href="index.html#section-eight" class="page-scroll">CONTACT</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line-one"></div>
+                <div class="line-two"></div>
+                <div class="line-three"></div>
+            </div>
+        </nav>
+    </header>
+    <!--! AKHIR NAVBAR -->
+
+    <!--! JUMBOTRON -->
+    <section class="blog-jumbotron jumbotron-fluid text-center" id="blog-jumbotron">
+        <div class="container">
+            <div class="row pt-5 flex-column">
+                <div class="col">
+                    <h1>Blogs Details Page</h1>
+                </div>
+                <div class="col">
+                    <a href="index.html">Home</a>
+                    <span class="lnr lnr-arrow-right px-2"></span>
+                    <a href="allblog.html">Blog</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--! AKHIR JUMBOTRON -->
+
+    <!--! BLOG CONTENT  -->
+    <section class="blog-content">
+        <div class="container">
+            <div class="row">
+                <!--? BLOG HOME LEFT  -->
+                <div class="col-lg-8 col-md-12 left">
+                    <img src="img/blog4/blog-home4.jpg" alt="blog-image4" class="img-fluid" width="100%">
+                    <div class="row py-4">
+                        <div class="col-lg-3 d-flex flex-column text-right">
+                            <div class="category pb-1">
+                                <a href="#" class="grey">
+                                    <p>CSS</p>
+                                </a>
+                            </div>
+                            <div class="name pb-1">
+                                <a href="#section-eight" class="grey">
+                                    <p>Azril ardian<span class="lnr lnr-user pl-3"></span></p>
+                                </a>
+                            </div>
+                            <div class="date pb-1">
+                                <a href="#" class="grey">
+                                    <p class="time"></p><span class="lnr lnr-calendar-full pl-3"></span>
+                                </a>
+                            </div>
+                            <div class="blog-socmed">
+                                <a href="https://www.facebook.com/azril.ardian.1" target="_blank"><i
+                                                class="fa fa-facebook"></i></a>
+                                <a href="https://twitter.com/azrilardian_" target="_blank"><i
+                                                class="fa fa-twitter"></i></a>
+                                <a href="https://github.com/Azrilardian" target="_blank"><i
+                                                class="fa fa-github"></i></a>
+                                <a href="https://www.instagram.com/azrilardian_" target="_blank"><i
+                                                class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 paragraf">
+                            <h4>Cara merubah warna dan lebar scrollbar pada website menggunakan CSS</h4>
+                            <p class="pt-2">Scrollbar adalah penggeser yang digunakan untuk melihat bagian bawah suatu blog atau website.
+                            </p>
+                            <p>Setiap browser memiliki default scrollbarnya sendiri. Biasanya, berwarna abu - abu tua dan berada pada sisi sebelah kanan sebuah browser.
+                            </p>
+                            <p>Tapi, pernahkah kamu melihat suatu website yang memiliki scrollbar berwarna biru atau merah ? Atau pernahkah kamu melihat scrollbar disuatu website yang mempunyai lebar tidak seperti biasanya ?</p>
+                            <p>Walaupun setiap browser sudah menerapkan bentuk scrollbarnya sendiri, kita masih bisa merubah warna dan bentuk scrollbar tersebut.</p>
+                            <p>Ada beberapa cara merubah style pada scrollbar. Tetapi kali ini, cara yang saya bagikan adalah dengan menggunakan attribute pada CSS.</p>
+                        </div>
+                        <div class="col-lg-12 paragraf">
+                            <p class="p-motivation">"Hidup itu sederhana, kita yang membuatnya sulit."<br><br> - Confucius
+                            </p>
+                            <p>Pertama, buka code editor kamu, lalu buat file index.html baru dan style.css baru
+                            </p>
+                            <p>Buka index.html dan tulis sintaks default html.</p>
+                            <pre><code class="language-html">&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+    &lt;link rel="stylesheet" href="style.css">
+    &lt;title>Mengubah Scrollbar&lt;/title>
+&lt;/head>
+&lt;body>
+    
+&lt;/body>
+&lt;/html>
+</code></pre>
+                            <p>Dan jangan lupa untuk menghubungkan file index.html dengan style.css</p>
+                            <p>Setelah itu, buka style.css dan terapkan style berikut pada selector "body".</p>
+                            <pre><code class="language-css">body { 
+    height : 200vh;
+}
+</code></pre>
+                            <p>Style tersebut untuk merubah tinggi dari body, yang dimana bertujuan agar kita dapat melihat scrollbar default browser.</p>
+                            <p class="p-header">1. Jika kamu menggunakan google chrome sebagai browser, maka tambahkan style berikut pada css</p>
+                            <p>Pertama kita ubah dahulu lebar dari scrollbar</p>
+                            <pre><code class="language-css">body::-webkit-scrollbar{
+    width : 7px;
+}
+</code></pre>
+                            <p>Setelah itu, kita dapat mengubah warna track yang ada pada bagian scroll</p>
+                            <pre><code class="language-css">body::-webkit-scrollbar-track{
+    background-color : #1f1f1f;
+}
+</code></pre>
+                            <p>Dan yang terakhir, kita ubah warna thumb yang ada pada scrollbar</p>
+                            <pre><code class="language-css">body::-webkit-scrollbar-thumb{
+    background-color : lightblue;
+}
+</code></pre>
+                            <p>Hasil</p>
+                            <img src="img/blog4/Screenshot (129).png" alt="hasil" width="100%">
+                            <p class="pt-3 p-header">2. Jika kamu menggunakan firefox sebagai default browser, maka gunakan cara ini </p>
+                            <pre><code class="language-css">:root{
+    scrollbar-color: #2aadeb #1f1f1f;
+    scrollbar-width: thin !important;
+}
+</code></pre>
+                            <p>Kedua cara diatas memiliki fungsi yang sama, hanya saja cara pertama hanya bisa bekerja di browser google chrome dan cara kedua hanya bekerja pada browser firefox.
+                            </p>
+                            <p>Tentu, kamu dapat bermain dengan property - property diatas. Ubah sesuai selera atau tema website yang kamu miliki.</p>
+                        </div>
+                    </div>
+                    <div class="comment-box">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h5>Leave a Comment</h5>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center my-4">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <input type="text" placeholder="Enter Name" class="width marbot">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <input type="email" placeholder="Enter Email Address" class="width">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" placeholder="subject" class="width">
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col">
+                                <textarea name="message" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="row text-center">
+                            <div class="col">
+                                <button type="button">POST COMMENT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12 right">
+                    <div class="search d-flex justify-content-center align-items-center">
+                        <input type="text" placeholder="Search Posts">
+                        <button type="button"><i class="fa fa-search"></i></button>
+                    </div>
+                    <hr>
+                    <div class="profile text-center my-5">
+                        <img src="img/profile.jpeg" alt="profile-img" class="img-fluid mb-5">
+                        <h5>Azril ardian ifansyah</h5>
+                        <p class="who">Front end developer</p>
+                        <div class="blog-socmed my-2">
+                            <a href="https://www.facebook.com/azril.ardian.1" target="_blank"><i
+                                            class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/azrilardian_" target="_blank"><i
+                                            class="fa fa-twitter"></i></a>
+                            <a href="https://github.com/Azrilardian" target="_blank"><i
+                                            class="fa fa-github"></i></a>
+                            <a href="https://www.instagram.com/azrilardian_" target="_blank"><i
+                                            class="fa fa-instagram"></i></a>
+                        </div>
+                        <p>Pengaggum rahasia, yang bercita - cita menjadi front end developer.</p>
+                    </div>
+                    <!--! Popular Posts  -->
+                    <div class="popular-posts">
+                        <h4 class="head text-center mb-4">Popular Posts</h4>
+                        <a href="#" class="pb-3">5 latest technology for gamers</a>
+                        <a href="#" class="pb-3">8 reasons and benefits of a business that has a website</a>
+                        <a href="#" class="pb-3">7 Cheap Web Hosts in</a>
+                    </div>
+                    <!--! Akhir popular Post  -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--! AKHIR BLOG CONTENT  -->
+
+
+    <!--! FOOTER  -->
+    <section class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p class="pt-3">© Copyright 2014 <a href="#">Azril ardian</a>. All rights reserved.</p>
+                    <div class="menu">
+                        <a class="text-white page-scroll" href="index.html#section-two">Features</a>
+                        <a class="text-white page-scroll" href="index.html#section-three">Skills</a>
+                        <a class="text-white page-scroll" href="index.html#section-four">Services</a>
+                        <a class="text-white page-scroll" href="index.html#section-five">Portfolio</a>
+                        <a class="text-white page-scroll" href="index.html#section-eight">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--! AKHIR FOOTER -->
+
+
+
+    <!--! Optional JavaScript -->
+    <!--! jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/moment-with-locales.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/prism.js"></script>
+</body>
+
+</html>
