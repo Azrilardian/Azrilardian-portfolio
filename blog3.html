@@ -278,6 +278,26 @@
                             <p>that's some web hosting options that you can choose.</p>
                         </div>
                     </div>
+                    <div class="comment my-5">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h4></h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 d-flex justify-content-between mb-2">
+                                <div class="left p-0 d-flex">
+                                    <img src="img/user.jpg" alt="user-image">
+                                    <div class="text d-flex flex-column mx-3">
+                                        <b class="username">Azril ardian ifansyah</b>
+                                        <p class="subject">Apresiasi</p>
+                                        <p class="user-comment">Saya dimana ?</p>
+                                    </div>
+                                </div>
+                                <h6>Reply</h6>
+                            </div>
+                        </div>
+                    </div>
                     <div class="comment-box">
                         <div class="row">
                             <div class="col text-center">
@@ -286,25 +306,25 @@
                         </div>
                         <div class="row justify-content-center my-4">
                             <div class="col-lg-6 col-md-6 col-sm-12">
-                                <input type="text" placeholder="Enter Name" class="width marbot">
+                                <input type="text" placeholder="Enter Name" class="width marbot" id="username">
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-12">
-                                <input type="email" placeholder="Enter Email Address" class="width">
+                                <input type="email" placeholder="Enter Email Address" class="width" id="email">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <input type="text" placeholder="subject" class="width">
+                                <input type="text" placeholder="subject" class="width" id="subject">
                             </div>
                         </div>
                         <div class="row my-4">
                             <div class="col">
-                                <textarea name="message" placeholder="Message"></textarea>
+                                <textarea name="message" placeholder="Message" id="comment"></textarea>
                             </div>
                         </div>
                         <div class="row text-center">
                             <div class="col">
-                                <button type="button">POST COMMENT</button>
+                                <button type="button" id="btn-comment">POST COMMENT</button>
                             </div>
                         </div>
                     </div>
@@ -375,6 +395,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/moment-with-locales.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/comment.js"></script>
 </body>
 
 </html>
