@@ -196,17 +196,13 @@ header .burger:hover div {
 }
 
 .blog-jumbotron {
-    min-height: 50vh;
+    min-height: 350px;
     background-image: url(../img/bg.jpg);
     background-size: cover;
     background-position-y: -300px;
     color: #fff;
     margin-top: -95px;
     background-attachment: fixed;
-}
-
-.blog-jumbotron .row {
-    margin-top: 100px;
 }
 
 .blog-jumbotron h1 {
@@ -221,28 +217,6 @@ header .burger:hover div {
 }
 
 .blog-jumbotron a:hover {
-    color: #2aadeb;
-}
-
-.blog-jumbotron .content a.button:hover {
-    background-color: transparent;
-    border-color: #2aadeb;
-    color: #2aadeb;
-    transition: 0.3s;
-}
-
-.blog-jumbotron .content .col.down {
-    margin-top: 100px;
-}
-
-.blog-jumbotron .content .col.down a {
-    font-size: 40px;
-    text-decoration: none;
-    color: #fff;
-    transition: 0.3s;
-}
-
-.blog-jumbotron .content .col.down a:hover {
     color: #2aadeb;
 }
 
@@ -331,10 +305,6 @@ header .burger:hover div {
     border: 1px solid #f0f0f0c0;
     transition: .2s ease;
     cursor: pointer;
-}
-
-.text {
-    width: 90%;
 }
 
 .comment .col-lg-12 h6:hover {
@@ -491,6 +461,21 @@ header .burger:hover div {
     color: #2aadeb !important;
 }
 
+@media (max-width: 992px) {
+    header nav {
+        padding: 0 70px;
+    }
+    header nav ul {
+        width: 450px;
+    }
+    .container {
+        padding: 0;
+    }
+    .blog-content .row .col-lg-3 {
+        margin-bottom: 40px;
+    }
+}
+
 @media (max-width: 768px) {
     header .burger {
         display: block;
@@ -556,30 +541,6 @@ header .burger:hover div {
     header nav ul li a {
         font-size: 12px;
     }
-    .jumbotron .content h1 {
-        font-size: 30px;
-        line-height: 30px;
-    }
-    .jumbotron .content h1 span.blue {
-        font-size: 30px;
-        line-height: 30px;
-    }
-    .jumbotron .content a.button {
-        padding: 13px 20px;
-        font-size: 10px;
-    }
-    .footer {
-        padding: 5px 0;
-    }
-    .footer .col {
-        flex-direction: column-reverse;
-    }
-    .footer p {
-        font-size: 13px;
-    }
-    .footer .menu {
-        display: none;
-    }
     .blog-jumbotron h1 {
         font-size: 30px;
     }
@@ -590,22 +551,32 @@ header .burger:hover div {
     .blog-content {
         padding: 100px 0;
     }
+    .blog-content .comment-box input.width,
+    .blog-content .comment-box textarea,
+    .blog-content .comment-box button {
+        font-size: 14px;
+    }
+    .footer {
+        padding: 5px 0;
+    }
+    .footer .col {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .footer p {
+        font-size: 13px;
+    }
+    .footer .menu {
+        display: none;
+    }
 }
 
-@media (max-width: 992px) {
-    header nav {
-        padding: 0 70px;
+@media (max-width: 410px) {
+    .comment .left {
+        flex-direction: column;
     }
-    header nav ul {
-        width: 450px;
-    }
-    .container {
-        padding: 0;
-    }
-    .blog-jumbotron .row {
-        margin-top: 120px;
-    }
-    .blog-content .row .col-lg-3 {
-        margin-bottom: 40px;
+    .comment .text {
+        margin: 13px 0 !important;
+        width: 170%;
     }
 }
