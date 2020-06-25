@@ -753,6 +753,13 @@ header .burger:hover div {
     padding: 50px;
 }
 
+.section-six-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .section-six h1 {
     font-size: 40px;
     font-weight: 600;
@@ -1033,125 +1040,6 @@ header .burger:hover div {
     overflow: hidden;
 }
 
-@media (max-width: 768px) {
-    header .burger {
-        display: block;
-    }
-    header nav {
-        padding: 0 20px !important;
-    }
-    header nav ul {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 65% !important;
-        height: 100vh;
-        background-color: #1f1f1fe1;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        transition: all 0.3s ease-in-out;
-        transform: translateX(100%);
-        display: none;
-    }
-    header nav ul li {
-        opacity: 0;
-    }
-    @keyframes liFadeIn {
-        from {
-            opacity: 0;
-            transform: translateX(50px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    .nav-active {
-        transform: translateX(0) !important;
-        display: flex;
-    }
-    .toggle .line-one {
-        transform: rotate(-45deg) translate(-5px, 5px);
-    }
-    .toggle .line-two {
-        opacity: 0;
-    }
-    .toggle .line-three {
-        transform: rotate(45deg) translate(-5px, -5px);
-    }
-    .jumbotron .content h1 {
-        font-size: 32px;
-        line-height: 46px;
-        font-weight: 100;
-        padding: 0 10px;
-    }
-    .section-seven .blog {
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 575px) {
-    header nav .logo a {
-        font-size: 19px;
-    }
-    header nav ul li a {
-        font-size: 12px;
-    }
-    .jumbotron .content h1 {
-        font-size: 30px;
-        line-height: 30px;
-    }
-    .jumbotron .content h1 span.blue {
-        font-size: 30px;
-        line-height: 30px;
-    }
-    .jumbotron .content a.button {
-        padding: 13px 20px;
-        font-size: 10px;
-    }
-    section .col.header h1 {
-        font-size: 30px;
-    }
-    .section-four,
-    .section-two .col-lg-4 {
-        padding: 0 30px;
-    }
-    .section-five {
-        padding: 70px 20px 60px;
-    }
-    .section-six .row.project .col-lg-3 {
-        margin-bottom: 20px;
-    }
-    .section-six .row.contact {
-        padding: 20px;
-    }
-    .section-seven {
-        padding: 0 20px;
-    }
-    .section-seven .blog {
-        margin-bottom: 20px;
-    }
-    .section-seven .information h5 {
-        font-size: 16px;
-    }
-    .section-seven p {
-        font-size: 12px;
-    }
-    .footer {
-        padding: 5px 0;
-    }
-    .footer .col {
-        flex-direction: column-reverse;
-    }
-    .footer p {
-        font-size: 13px;
-    }
-    .footer .menu {
-        display: none;
-    }
-}
-
 @media (max-width: 992px) {
     header nav {
         padding: 0 70px;
@@ -1182,6 +1070,12 @@ header .burger:hover div {
     .section-four .logo {
         margin-right: 0;
     }
+    .section-seven .img-container img {
+        transition: 0.3s;
+        height: 270px;
+        width: 100%;
+        border-radius: 3px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -1204,7 +1098,7 @@ header .burger:hover div {
         right: 0;
         width: 65% !important;
         height: 100vh;
-        background-color: #1f1f1fe1;
+        background-color: #1f1f1fef;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
@@ -1274,6 +1168,9 @@ header .burger:hover div {
     .section-four,
     .section-two .col-lg-4 {
         padding: 0 30px;
+    }
+    .section-two .left {
+        padding-bottom: 60px;
     }
     .section-five {
         padding: 70px 20px 60px;
