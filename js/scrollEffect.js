@@ -27,9 +27,9 @@ window.addEventListener("scroll", function() {
             }, 350);
         }
     }
+    scrollEffectEach(".portofolio-parallax");
     scrollEffect(".scrollEffect");
     scrollEffect(".team-parallax");
     scrollEffect(".progress-parallax");
     scrollEffectEach(".service-parallax");
-    scrollEffectEach(".portofolio-parallax");
 });
