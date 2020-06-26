@@ -1071,10 +1071,7 @@ header .burger:hover div {
         margin-right: 0;
     }
     .section-seven .img-container img {
-        transition: 0.3s;
-        height: 270px;
-        width: 100%;
-        border-radius: 3px;
+        height: 250px;
     }
 }
 
@@ -1205,5 +1202,11 @@ header .burger:hover div {
     }
     .footer .menu {
         display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .section-seven .img-container img {
+        height: 180px;
     }
 }
