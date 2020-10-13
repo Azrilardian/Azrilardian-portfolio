@@ -61,16 +61,17 @@ function loading(){
     const imgLoading = document.querySelector("img.img-loading");
     const section = document.querySelectorAll("section");
     const header = document.querySelector("header");
+
     section.forEach(e => e.classList.add("loading"));
     header.classList.add("loading");
     body.classList.add("loading");
-    document.addEventListener("DOMContentLoaded",function(){
-        setTimeout(()=> {
-            section.forEach(e => e.classList.remove("loading"));
-            header.classList.remove("loading");
-            body.classList.remove("loading");
-            imgLoading.classList.add("loading-clear");
-        },1000);
+    
+    window.addEventListener("load",()=>{
+        section.forEach(e => e.classList.remove("loading"));
+        header.classList.remove("loading");
+        body.classList.remove("loading");
+        imgLoading.classList.add("loading-clear");
+        console.log("aaa");
     })
 }
 loading();
