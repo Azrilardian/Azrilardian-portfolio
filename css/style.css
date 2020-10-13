@@ -3,6 +3,27 @@ body {
     font-family: "poppins", sans-serif;
 }
 
+body.loading{
+    display: flex;
+    height: 100vh;
+}
+section.loading,
+header.loading{
+    opacity: 0;
+    transition: .3s ease-in-out;
+    display: none !important;
+}
+
+img.img-loading{
+    margin: auto;
+    user-select: none;
+    width: 300px;
+    height: 120px;
+}
+img.img-loading.loading-clear{
+    display: none;
+}
+
 a::selection,
 h1::selection,
 h2::selection,
@@ -1208,5 +1229,9 @@ header .burger:hover div {
 @media (max-width: 400px) {
     .section-seven .img-container img {
         height: 180px;
+    }
+    img.img-loading{
+        width: 230px;
+        height: 60px;
     }
 }
