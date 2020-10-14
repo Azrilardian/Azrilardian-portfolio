@@ -58,7 +58,7 @@ buttonToTop();
 
 function loading(){
     const body = document.querySelector("body");
-    const imgLoading = document.querySelector("img.img-loading");
+    const containerImgLoading = document.querySelector(".img-loading");
     const section = document.querySelectorAll("section");
     const header = document.querySelector("header");
 
@@ -66,12 +66,12 @@ function loading(){
     header.classList.add("loading");
     body.classList.add("loading");
     
-    windowk.addEventListener("load",()=>{
+    window.addEventListener("load",()=>{
         section.forEach(e => e.classList.remove("loading"));
         header.classList.remove("loading");
         body.classList.remove("loading");
-        imgLoading.classList.add("loading-clear");
-        console.log("aaa");
+        containerImgLoading.remove();
+
     })
 }
 loading();

@@ -28,9 +28,6 @@ header.loading{
 .img-loading p{
     font-weight: 600;
 }
-.img-loading.loading-clear{
-    display: none;
-}
 
 a::selection,
 h1::selection,
