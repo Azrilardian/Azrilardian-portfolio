@@ -1,28 +1,33 @@
-body {
-	overflow-x: hidden;
+html body {
 	font-family: "poppins", sans-serif;
 }
 
-body.loading {
+html body.loading {
 	display: flex;
 	height: 100vh;
+	overflow-y: scroll;
 }
+
 section.loading,
 header.loading {
 	opacity: 0;
-	transition: 0.3s ease-in-out;
 	display: none !important;
 }
 
 .img-loading {
 	margin: auto;
 	user-select: none;
-	height: 90px;
+	height: 100vh;
+	z-index: 1000 !important;
+	transition: 1s ease;
+}
+.img-loading.loaded {
+	opacity: 0;
 }
 
 .img-loading img {
-	width: 100%;
-	height: 100%;
+	width: 17%;
+	height: 17%;
 }
 
 .img-loading p {
@@ -105,13 +110,17 @@ header {
 
 header nav {
 	display: flex;
-	justify-content: space-between;
-	min-height: 55px;
+	align-items: center;
+	min-height: 70px;
 	align-items: center;
 	z-index: 99;
 	background-color: transparent !important;
-	padding: 0 120px;
 	transition: all 0.3s ease-in;
+}
+
+header nav .container {
+	display: flex;
+	justify-content: space-between;
 }
 
 header .black {
@@ -119,7 +128,7 @@ header .black {
 	transition: all 0.3s ease-in;
 }
 
-header .logo a {
+header a.logo {
 	font-size: 20px;
 	font-weight: 600;
 	text-decoration: none;
@@ -127,8 +136,7 @@ header .logo a {
 	transition: 0.3s ease-in-out;
 }
 
-header .logo a:hover,
-header ul li a:hover {
+header a:hover {
 	color: #2aadeb;
 	text-decoration: none;
 }
@@ -179,7 +187,7 @@ header .burger:hover div {
 	background-position: center;
 	color: #fff;
 	background-attachment: fixed;
-	margin-top: -55px;
+	margin-top: -70px;
 	font-family: "Source Sans Pro", sans-serif;
 }
 
@@ -224,12 +232,6 @@ header .burger:hover div {
 	}
 }
 
-.jumbotron .container .col.jumbo-button {
-	position: absolute;
-	top: 53%;
-	left: 0;
-}
-
 .jumbotron .content a.button {
 	background-color: #fff;
 	border: 2px solid #fff;
@@ -242,7 +244,6 @@ header .burger:hover div {
 	letter-spacing: 2px;
 	text-decoration: none;
 	transition: 0.3s;
-	z-index: 999;
 }
 
 .jumbotron .content a.button:hover {
@@ -844,62 +845,109 @@ header .burger:hover div {
 
 .section-seven .img-container {
 	transition: 0.3s;
-	border-radius: 3px;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.section-seven .img-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	height: 150%;
+	width: 7%;
+	background-color: #e7e7e76e;
+	opacity: 0.8;
+	box-shadow: 0 0 10px #e0e0e065;
+	animation: glass 3s ease-in-out infinite;
+}
+
+.section-seven .img-container::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	height: 150%;
+	width: 3%;
+	background-color: #e7e7e76e;
+	opacity: 0.8;
+	box-shadow: 0 0 10px #e0e0e065;
+	animation: glassTwo 2s ease-in-out infinite;
+	animation-delay: 1s;
+}
+
+.section-seven .nonaktif .img-container::before,
+.section-seven .nonaktif .img-container::after {
+	animation: unset;
+}
+
+@keyframes glass {
+	from {
+		transform: rotate(40deg) translate(-1200%, -50%);
+	}
+	to {
+		transform: rotate(40deg) translate(4000%, -50%);
+	}
+}
+
+@keyframes glassTwo {
+	from {
+		transform: rotate(40deg) translate(-4000%, -0%);
+	}
+	to {
+		transform: rotate(40deg) translate(4000%, -0%);
+	}
 }
 
 .section-seven .img-container img {
 	transition: 0.3s;
-	height: 210px;
+	height: 230px;
 	width: 100%;
 	border-radius: 3px;
 }
 
-.section-seven .img-container:hover img {
-	transform: scale(1.05);
+.section-seven img.see-more {
+	opacity: 0;
 }
 
-.section-seven .profile img {
-	width: 30px;
-	height: 30px;
-}
-
-.section-seven .information a {
-	text-decoration: none;
-	color: #1f1f1f;
-}
-
-.section-seven .information h5 {
-	text-transform: uppercase;
+.section-seven .col-lg-4 h5 {
+	font-size: 14px;
 	font-weight: 600;
-	transition: 0.3s;
-	font-size: 17px;
-}
-
-.section-seven .information h5:hover {
-	color: #2aadeb;
-}
-
-.section-seven .information p {
-	font-size: 13px;
-	color: #7c7c7c;
-}
-
-.a-time {
-	display: flex;
-	width: 100%;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.view-more a {
-	text-decoration: none;
+	margin-top: 10px;
 	color: #1f1f1f;
-	transition: 0.3s ease;
-	display: inline-block;
 }
 
-.view-more a:hover {
-	color: #2aadeb;
+.section-seven .col-lg-4 p {
+	font-size: 14px;
+	font-weight: 300;
+	margin-top: -5px;
+	color: #535353;
+}
+
+.section-seven span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition: 0.5s;
+	background-color: whitesmoke;
+}
+
+.section-seven span a {
+	color: #1f1f1f;
+	height: 40px;
+	width: 110px;
+	line-height: 40px;
+	text-decoration: none;
+	display: block;
+	border: 2px solid #2aadeb;
+	border-radius: 25px;
+	transition: 0.5s;
+}
+
+.section-seven span a:hover {
+	background-color: #2aadeb;
 }
 
 .section-eight {
@@ -1011,59 +1059,14 @@ header .burger:hover div {
 	color: #2aadeb !important;
 }
 
-.blog-jumbotron {
-	min-height: 50vh;
-	background-image: url(../img/bg.jpg);
-	background-size: cover;
-	background-position-y: -300px;
-	color: #fff;
-	margin-top: -95px;
-	background-attachment: fixed;
-}
-
-.blog-jumbotron .row {
-	margin-top: 100px;
-}
-
-.blog-jumbotron h1 {
-	font-weight: 400;
-}
-
-.blog-jumbotron a {
-	font-size: 15px;
-	color: #98999c;
-	text-decoration: none;
-	transition: 0.3s;
-}
-
-.blog-jumbotron a:hover {
-	color: #2aadeb;
-}
-
-.blog-jumbotron .content a.button:hover {
-	background-color: transparent;
-	border-color: #2aadeb;
-	color: #2aadeb;
-	transition: 0.3s;
-}
-
-.blog-jumbotron .content .col.down {
-	margin-top: 100px;
-}
-
-.blog-jumbotron .content .col.down a {
-	font-size: 40px;
-	text-decoration: none;
-	color: #fff;
-	transition: 0.3s;
-}
-
-.blog-jumbotron .content .col.down a:hover {
-	color: #2aadeb;
-}
-
 .container {
 	overflow: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+	.section-seven img {
+		height: 190px !important;
+	}
 }
 
 @media (max-width: 992px) {
@@ -1096,8 +1099,8 @@ header .burger:hover div {
 	.section-four .logo {
 		margin-right: 0;
 	}
-	.section-seven .img-container img {
-		height: 250px;
+	.section-seven img {
+		height: 160px !important;
 	}
 }
 
@@ -1173,9 +1176,6 @@ header .burger:hover div {
 		font-weight: 100;
 		padding: 0 10px;
 	}
-	.section-seven .blog {
-		margin-bottom: 20px;
-	}
 }
 
 @media (max-width: 575px) {
@@ -1223,14 +1223,8 @@ header .burger:hover div {
 	.section-seven {
 		padding: 0 20px;
 	}
-	.section-seven .blog {
-		margin-bottom: 20px;
-	}
-	.section-seven .information h5 {
-		font-size: 16px;
-	}
-	.section-seven p {
-		font-size: 12px;
+	.section-seven .img-container img {
+		height: 290px !important;
 	}
 	.footer {
 		padding: 5px 0;
@@ -1244,15 +1238,5 @@ header .burger:hover div {
 	}
 	.footer .menu {
 		display: none;
-	}
-}
-
-@media (max-width: 400px) {
-	.section-seven .img-container img {
-		height: 180px;
-	}
-
-	.img-loading {
-		height: 60px;
 	}
 }

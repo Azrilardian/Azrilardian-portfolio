@@ -84,10 +84,13 @@ function loading() {
 	body.classList.add("loading");
 
 	window.addEventListener("load", () => {
-		section.forEach((e) => e.classList.remove("loading"));
-		header.classList.remove("loading");
-		body.classList.remove("loading");
-		containerImgLoading.remove();
+		containerImgLoading.classList.add("loaded");
+		setTimeout(() => containerImgLoading.remove(), 2000);
+		setTimeout(() => {
+			section.forEach((e) => e.classList.remove("loading"));
+			header.classList.remove("loading");
+			body.classList.remove("loading");
+		}, 2000);
 	});
 }
 loading();
