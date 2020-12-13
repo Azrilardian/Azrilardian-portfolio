@@ -489,12 +489,12 @@ header .burger {
 	animation: loading-1 1.8s linear forwards;
 }
 
-.progress .progress-value {
+.progress h4 {
 	width: 90%;
 	height: 90%;
 	border-radius: 50%;
 	background: #44484b;
-	font-size: 24px;
+	font-size: 18px;
 	color: #fff;
 	line-height: 135px;
 	text-align: center;
@@ -503,19 +503,19 @@ header .burger {
 	left: 5%;
 }
 .progress.blue .progress-left .progress-bar {
-	animation: loading-2 1s linear forwards 1.8s;
-}
-
-.progress.yellow .progress-left .progress-bar {
-	animation: loading-3 1s linear forwards 1.8s;
-}
-
-.progress.pink .progress-left .progress-bar {
-	animation: loading-4 0.4s linear forwards 1.8s;
+	animation: loading-5 1s linear forwards 1.8s;
 }
 
 .progress.green .progress-left .progress-bar {
 	animation: loading-5 1.2s linear forwards 1.8s;
+}
+
+.progress.pink .progress-left .progress-bar {
+	animation: loading-5 0.4s linear forwards 1.8s;
+}
+
+.progress.yellow .progress-left .progress-bar {
+	animation: loading-4 1s linear forwards 1.8s;
 }
 
 @keyframes loading-1 {
