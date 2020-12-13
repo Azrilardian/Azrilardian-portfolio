@@ -99,7 +99,7 @@ a#button-to-top {
 	position: fixed;
 	font-size: 17px;
 	bottom: 20px;
-	right: 20px;
+	right: 35px;
 	transition: 0.3s;
 	opacity: 0;
 	visibility: hidden;
@@ -1340,7 +1340,7 @@ footer .menu a:hover {
 		margin: 100px 0;
 	}
 	.certificate-parallax .img-container img {
-		height: 220px !important;
+		height: 200px !important;
 	}
 
 	.preview-section .contact h4 {
