@@ -57,40 +57,48 @@ function navigation() {
 	});
 
 	window.addEventListener("scroll", function () {
-		if (pageYOffset >= 200) navContainer.classList.add("black");
-		else if (pageYOffset == 0) navContainer.classList.remove("black");
+		if (pageYOffset >= 100) return navContainer.classList.add("black");
+		navContainer.classList.remove("black");
 	});
 }
 navigation();
 
 //! Button To Top
 function buttonToTop() {
-	const button = document.querySelector("a#button");
+	const button = document.getElementById("button-to-top");
 	window.addEventListener("scroll", function () {
-		if (pageYOffset >= 500) button.classList.add("show");
-		else if (pageYOffset < 500) button.classList.remove("show");
+		if (pageYOffset > 800) return button.classList.add("show");
+		button.classList.remove("show");
 	});
 }
 buttonToTop();
 
-function loading() {
-	const body = document.querySelector("body");
-	const containerImgLoading = document.querySelector(".img-loading");
-	const section = document.querySelectorAll("section");
-	const header = document.querySelector("header");
+const certficateFocus = () => {
+	const certificates = document.querySelectorAll(".certificate-parallax .img-container");
+	certificates.forEach((certificate) => {
+		certificate.addEventListener("click", function (e) {
+			certificates.forEach((el) => el.classList.remove("click"));
+			this.classList.add("click");
+		});
+	});
+};
+certficateFocus();
 
-	section.forEach((e) => e.classList.add("loading"));
-	header.classList.add("loading");
-	body.classList.add("loading");
+function loading() {
+	const containerImgLoading = document.querySelector(".img-loading");
+	const body = document.querySelector("body");
+	const section = document.querySelectorAll("section");
+	const footer = document.querySelector("footer");
+	const header = document.querySelector("header");
+	const allSection = [body, footer, header];
+
+	section.forEach((e) => allSection.push(e));
+	allSection.map((e) => e.classList.add("loading"));
 
 	window.addEventListener("load", () => {
 		containerImgLoading.classList.add("loaded");
 		setTimeout(() => containerImgLoading.remove(), 2000);
-		setTimeout(() => {
-			section.forEach((e) => e.classList.remove("loading"));
-			header.classList.remove("loading");
-			body.classList.remove("loading");
-		}, 2000);
+		setTimeout(() => allSection.map((e) => e.classList.remove("loading")), 2000);
 	});
 }
 loading();

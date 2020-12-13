@@ -25,7 +25,7 @@
 	</head>
 
 	<body>
-		<a id="button" href="#jumbotron" class="page-scroll"><span class="lnr lnr-chevron-up"></span></a>
+		<a id="button-to-top" href="#jumbotron" class="page-scroll"><span class="lnr lnr-chevron-up"></span></a>
 
 		<!--! LOADING -->
 		<div class="img-loading d-flex flex-column justify-content-center align-items-center">
@@ -36,10 +36,10 @@
 
 		<!--! NAVBAR -->
 		<header>
-			<nav>
-				<div class="container">
-					<a href="#jumbotron" class="page-scroll logo">AZRIL ARDIAN</a>
-					<ul>
+			<nav class="d-flex align-items-center">
+				<div class="container d-flex justify-content-between">
+					<a href="#jumbotron" class="logo page-scroll">AZRIL ARDIAN</a>
+					<ul class="d-flex m-0 list-unstyled">
 						<li><a href="#section-two" class="page-scroll">FEATURES</a></li>
 						<li><a href="#section-three" class="page-scroll">SKILLS</a></li>
 						<li><a href="#section-four" class="page-scroll">SERVICES</a></li>
@@ -68,12 +68,10 @@
 							</h1>
 						</div>
 						<div class="col jumbo-button">
-							<a href="#section-three" class="button tombol page-scroll">DISCOVER MORE</a>
+							<a href="#section-three" class="discover-more-btn tombol page-scroll">DISCOVER MORE</a>
 						</div>
 						<div class="col down">
-							<a class="page-scroll" href="#section-two">
-								<span class="lnr lnr-chevron-down"></span>
-							</a>
+							<a class="page-scroll" href="#section-two"><span class="lnr lnr-chevron-down"></span></a>
 						</div>
 					</div>
 				</div>
@@ -82,7 +80,7 @@
 		<!--! AKHIR JUMBOTRON -->
 
 		<!--! SECTION TWO -->
-		<section class="section-two" id="section-two">
+		<section class="section-two features-section" id="section-two">
 			<div class="container">
 				<div class="row header">
 					<div class="col header text-center">
@@ -91,22 +89,22 @@
 					</div>
 				</div>
 				<div class="row content mt-5">
-					<div class="col-lg-4 col-md-4 col-sm-12 left text-center">
-						<div class="margin parallax scrollEffect left">
+					<div class="col-lg-4 col-md-4 col-sm-12 text-center mb-3 feature">
+						<div class="feature-parallax left">
 							<i class="fa fa-mobile"></i>
 							<h3>Fully Responsive</h3>
 							<p>In addition to making the code as good and neat as possible, of course we do not forget responsive of the website that we make.</p>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-12 left text-center">
-						<div class="margin parallax">
+					<div class="col-lg-4 col-md-4 col-sm-12 text-center mb-3 feature">
+						<div>
 							<i class="fa fa-magic"></i>
 							<h3>Awesome Features</h3>
 							<p>The features we provide are the best features that we will make for you. Tell we the features you want, we will make it for you.</p>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-12 left text-center">
-						<div class="margin parallax scrollEffect right">
+					<div class="col-lg-4 col-md-4 col-sm-12 text-center mb-3 feature">
+						<div class="feature-parallax right">
 							<i class="fa fa-cogs"></i>
 							<h3>Fully Customizible</h3>
 							<p>No need to worry, no need to hestitate, ask at will, revision repeatedly. We are ready to listen to your complaints.</p>
@@ -118,7 +116,7 @@
 		<!--! AKHIR SECTION TWO -->
 
 		<!--! SECTION THREE -->
-		<section class="section-three" id="section-three">
+		<section class="section-three skills-section" id="section-three">
 			<div class="container">
 				<div class="row header">
 					<div class="col header text-center">
@@ -127,7 +125,7 @@
 					</div>
 				</div>
 				<div class="row mt-5">
-					<div class="col-md-3 col-sm-6 progress-parallax left">
+					<div class="col-md-3 col-sm-6 skill progress-parallax left">
 						<div class="progress blue">
 							<span class="progress-left">
 								<span class="progress-bar"></span>
@@ -139,7 +137,7 @@
 						</div>
 						<h4 class="text-center py-4">HTML5</h4>
 					</div>
-					<div class="col-md-3 col-sm-6 parallax">
+					<div class="col-md-3 col-sm-6 skill">
 						<div class="progress green">
 							<span class="progress-left">
 								<span class="progress-bar"></span>
@@ -151,7 +149,7 @@
 						</div>
 						<h4 class="text-center py-4">CSS3</h4>
 					</div>
-					<div class="col-md-3 col-sm-6 parallax">
+					<div class="col-md-3 col-sm-6 skill">
 						<div class="progress pink">
 							<span class="progress-left">
 								<span class="progress-bar"></span>
@@ -163,7 +161,7 @@
 						</div>
 						<h4 class="text-center py-4">java Script</h4>
 					</div>
-					<div class="col-md-3 col-sm-6 progress-parallax right">
+					<div class="col-md-3 col-sm-6 skill progress-parallax right">
 						<div class="progress yellow">
 							<span class="progress-left">
 								<span class="progress-bar"></span>
@@ -181,7 +179,7 @@
 		<!--! AKHIR SECTION THREE -->
 
 		<!--! SECTION FOUR -->
-		<section class="section-four" id="section-four">
+		<section class="section-four services-section" id="section-four">
 			<div class="container">
 				<div class="row header">
 					<div class="col header text-center">
@@ -190,37 +188,29 @@
 					</div>
 				</div>
 				<div class="row pt-5">
-					<div class="col-lg-3 col-md-6 col-sm-12 services service-parallax left">
-						<div class="logo">
-							<span class="lnr lnr-select"></span>
-						</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 d-flex service left">
+						<span class="lnr lnr-select"></span>
 						<div class="text">
 							<h3>Web Design</h3>
 							<p>The design we make are modern designs. So no need to be embrrassed, there are no obsolete words. This is the future of design.</p>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6 col-sm-12 services service-parallax center-one">
-						<div class="logo">
-							<span class="lnr lnr-code"></span>
-						</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 d-flex service center-one">
+						<span class="lnr lnr-code"></span>
 						<div class="text">
 							<h3>Web Development</h3>
 							<p>Tell us what your dream website, we will be happy to help you realize your dreams.</p>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6 col-sm-12 services service-parallax center-two">
-						<div class="logo">
-							<span class="lnr lnr-diamond"></span>
-						</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 d-flex service center-two">
+						<span class="lnr lnr-diamond"></span>
 						<div class="text">
 							<h3>Creative Idea</h3>
 							<p>In addition, we are also ready to give you creative ideas in developing your business.</p>
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-6 col-sm-12 services service-parallax right">
-						<div class="logo">
-							<span class="lnr lnr-smile"></span>
-						</div>
+					<div class="col-lg-3 col-md-6 col-sm-12 d-flex service right">
+						<span class="lnr lnr-smile"></span>
 						<div class="text">
 							<h3>Awesome Support</h3>
 							<p>Don't be shy to give us complaints, we are happy to hear it, because your satisfaction is our pleasure.</p>
@@ -229,7 +219,7 @@
 				</div>
 				<div class="row pt-5">
 					<div class="col text-center">
-						<a href="#section-eight" class="page-scroll">Contact Us</a>
+						<a href="#section-eight" class="page-scroll contact-btn">Contact Us</a>
 					</div>
 				</div>
 			</div>
@@ -237,7 +227,7 @@
 		<!--! AKHIR SECTION FOUR -->
 
 		<!--! SECTION FIVE -->
-		<section class="section-five overflow-hidden" id="section-five">
+		<section class="section-five portfolios-section" id="section-five">
 			<div class="container">
 				<div class="row header">
 					<div class="col header text-center">
@@ -246,45 +236,45 @@
 					</div>
 				</div>
 				<div class="row pt-5">
-					<div class="col-lg-4 col-md-4 col-sm-6 portofolio-parallax">
-						<div class="margin text-center">
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-parallax">
+						<div class="text-center">
 							<img src="img/portfolio1.png" alt="portfolio-one" class="img-fluid" />
 							<span class="d-flex justify-content-center align-items-center"><a href="#portfolio-1">View More</a></span>
 						</div>
 						<h5>Personal</h5>
 						<p>Indonesia</p>
 					</div>
-					<a class="overlay" id="portfolio-1" href="#section-five">
-						<div class="get-scroll">
+					<a class="overlay d-flex justify-content-center align-items-center" id="portfolio-1" href="#section-five">
+						<div class="get-scroll d-flex flex-wrap">
 							<img src="img/personal-view.jpg" alt="personal-view" class="one" />
 							<img src="img/personalAbout-view.jpg" alt="personal-about-view" />
 							<img src="img/personal-blog-view.jpg" alt="personal-blog-view" />
 							<img src="img/personal-contact-view.jpg" alt="personal-contact-view" />
 						</div>
 					</a>
-					<div class="col-lg-4 col-md-4 col-sm-6 portofolio-parallax">
-						<div class="margin text-center">
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-parallax">
+						<div class="text-center">
 							<img src="img/portfolio2.png" alt="portfolio-two" class="img-fluid" />
 							<span class="d-flex justify-content-center align-items-center"><a href="#portfolio-2">View More</a></span>
 						</div>
 						<h5>Elciqiiu</h5>
 						<p>Indonesia</p>
 					</div>
-					<a class="overlay" id="portfolio-2" href="#section-five">
-						<div class="get-scroll">
+					<a class="overlay d-flex justify-content-center align-items-center" id="portfolio-2" href="#section-five">
+						<div class="get-scroll d-flex flex-wrap">
 							<img src="img/elciqiiu-view.jpg" alt="elciqiiu-view" />
 						</div>
 					</a>
-					<div class="col-lg-4 col-md-4 col-sm-6 portofolio-parallax">
-						<div class="margin text-center">
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-parallax">
+						<div class="text-center">
 							<img src="img/portfolio3.png" alt="portfolio-three" class="img-fluid" />
 							<span class="d-flex justify-content-center align-items-center"><a href="#portfolio-3">View More</a></span>
 						</div>
 						<h5>Lorem</h5>
 						<p>Indonesia</p>
 					</div>
-					<a class="overlay" id="portfolio-3" href="#section-five">
-						<div class="get-scroll">
+					<a class="overlay d-flex justify-content-center align-items-center" id="portfolio-3" href="#section-five">
+						<div class="get-scroll d-flex flex-wrap">
 							<img src="img/website11-show.jpg" alt="website11-home" />
 							<img src="img/website11-about-show.jpg" alt="website11-about" />
 							<img src="img/website11-features-show.jpg" alt="website11-features" />
@@ -292,34 +282,34 @@
 							<img src="img/website11-signup-show.jpg" alt="website11-signup-show" />
 						</div>
 					</a>
-					<div class="col-lg-4 col-md-4 col-sm-6 portofolio-parallax">
-						<div class="margin text-center">
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-parallax">
+						<div class="text-center">
 							<img src="img/portfolio4.png" alt="portfolio-four" class="img-fluid" />
 							<span class="d-flex justify-content-center align-items-center"><a href="#portfolio-4">View More</a></span>
 						</div>
 						<h5>Solution</h5>
 						<p>Indonesia</p>
 					</div>
-					<a class="overlay" id="portfolio-4" href="#section-five">
-						<div class="get-scroll">
+					<a class="overlay d-flex justify-content-center align-items-center" id="portfolio-4" href="#section-five">
+						<div class="get-scroll d-flex flex-wrap">
 							<img src="img/solution-show.jpg" alt="solution-show" />
 						</div>
 					</a>
-					<div class="col-lg-4 col-md-4 col-sm-6 portofolio-parallax">
-						<div class="margin text-center">
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-parallax">
+						<div class="text-center">
 							<img src="img/portfolio5.png" alt="portfolio-five" class="img-fluid" />
 							<span class="d-flex justify-content-center align-items-center"><a href="#portfolio-5">View More</a></span>
 						</div>
 						<h5>Ziggy</h5>
 						<p>Indonesia</p>
 					</div>
-					<a class="overlay" id="portfolio-5" href="#section-five">
-						<div class="get-scroll">
+					<a class="overlay d-flex justify-content-center align-items-center" id="portfolio-5" href="#section-five">
+						<div class="get-scroll d-flex flex-wrap">
 							<img src="img/ziggy-show.jpg" alt="ziggy-show" />
 						</div>
 					</a>
-					<div class="col-lg-4 col-md-4 col-sm-6 portofolio-parallax">
-						<div class="margin text-center">
+					<div class="col-lg-4 col-md-4 col-sm-6 portfolio-parallax">
+						<div class="text-center">
 							<img src="img/portfolio1.png" alt="more" class="img-fluid see-more" />
 							<span class="d-flex justify-content-center align-items-center see-more"><a href="allportfolio.html">View More</a></span>
 						</div>
@@ -329,8 +319,8 @@
 		</section>
 		<!--! AKHIR SECTION FIVE  -->
 
-		<!--! SECTION SEVEN -->
-		<section class="section-seven certificate">
+		<!--! SECTION SIX -->
+		<section class="section-six certificates-section">
 			<div class="container">
 				<div class="row header">
 					<div class="col header text-center">
@@ -339,42 +329,42 @@
 					</div>
 				</div>
 				<div class="row mt-5">
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 certificate-parallax">
 						<div class="img-container">
 							<img src="./img/Certificate/Dicoding Certificate - Dasar Pemrograman Web 2-1.png" alt="Dasar Pemrograman Web" class="img-fluid" />
 						</div>
 						<h5>Dasar Pemrograman Web</h5>
 						<p>Dicoding</p>
 					</div>
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 certificate-parallax">
 						<div class="img-container">
 							<img src="./img/Certificate/Dicoding Certificate - Fundamental Front End Web Development-1.png" alt="Fundamental Front End Web Development" class="img-fluid" />
 						</div>
 						<h5>Fundamental Front End Web Development</h5>
 						<p>Dicoding</p>
 					</div>
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 certificate-parallax">
 						<div class="img-container">
 							<img src="./img/Certificate/Dicoding Certificate - Prinsip Pemrograman SOLID-1.png" alt="Prinsip Pemrograman SOLID" class="img-fluid" />
 						</div>
 						<h5>Prinsip Pemrograman SOLID</h5>
 						<p>Dicoding</p>
 					</div>
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 certificate-parallax">
 						<div class="img-container">
 							<img src="./img/Certificate/Bitlabs - Web Developer-1.jpg" alt="Web Developer" class="img-fluid" />
 						</div>
 						<h5>Web Developer</h5>
 						<p>Bitlabs</p>
 					</div>
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 certificate-parallax">
 						<div class="img-container">
 							<img src="./img/Certificate/Bitlabs - Membuat Web dengan Wordpress-1.jpg" alt="Membuat Web dengan Wordpress" class="img-fluid" />
 						</div>
 						<h5>Membuat Web dengan Wordpress</h5>
 						<p>Bitlabs</p>
 					</div>
-					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 nonaktif">
+					<div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 certificate-parallax nonaktif">
 						<div class="img-container text-center">
 							<img src="./img/Certificate/Codepolitan - Algoritma dan Pemrograman Dasar.png" alt="" class="img-fluid see-more" />
 							<span class="d-flex justify-content-center align-items-center see-more"><a href="allcertificate.html">View More</a></span>
@@ -383,12 +373,12 @@
 				</div>
 			</div>
 		</section>
-		<!--! AKHIR SECTION SEVEN -->
+		<!--! AKHIR SECTION SIX -->
 
-		<!--! SECTION SIX  -->
-		<section class="section-six overflow-hidden" id="section-six">
+		<!--! SECTION SEVEN  -->
+		<section class="section-seven overflow-hidden preview-section">
 			<div class="row project text-center text-white">
-				<div class="container section-six-container">
+				<div class="container d-flex justify-content-between flex-wrap">
 					<div class="col-lg-3 col-md-3 col-sm-6">
 						<h1 class="counter">15</h1>
 						<p>Project Completed</p>
@@ -416,10 +406,10 @@
 				</div>
 			</div>
 		</section>
-		<!--! AKHIR SECTION SIX  -->
+		<!--! AKHIR SECTION SEVEN  -->
 
 		<!--! SECTION EIGHT  -->
-		<section class="section-eight" id="section-eight">
+		<section class="section-eight team-section" id="section-eight">
 			<div class="container">
 				<div class="row header">
 					<div class="col header text-center">
@@ -427,7 +417,7 @@
 						<hr />
 					</div>
 				</div>
-				<div class="row justify-content-center pt-5 team-profile team-parallax">
+				<div class="row justify-content-center pt-5 team-parallax">
 					<div class="col-lg-3 col-md-5 col-sm-7 col-7 text-center">
 						<div class="img-container">
 							<img src="img/profile.jpg" alt="azril ardian" class="img-fluid" />
@@ -447,22 +437,22 @@
 		<!--! AKHIR SECTION EIGHT  -->
 
 		<!--! FOOTER  -->
-		<section class="footer" id="footer">
+		<footer>
 			<div class="container">
 				<div class="row">
-					<div class="col">
+					<div class="col d-flex justify-content-between align-items-center">
 						<p class="pt-3">© Copyright 2019 <a href="#">Azril ardian</a>. All rights reserved.</p>
 						<div class="menu">
-							<a class="text-white page-scroll" href="#section-two">Features</a>
-							<a class="text-white page-scroll" href="#section-three">Skills</a>
-							<a class="text-white page-scroll" href="#section-four">Services</a>
-							<a class="text-white page-scroll" href="#section-five">Portfolio</a>
-							<a class="text-white page-scroll" href="#section-eight">Contact</a>
+							<a class="page-scroll" href="#section-two">Features</a>
+							<a class="page-scroll" href="#section-three">Skills</a>
+							<a class="page-scroll" href="#section-four">Services</a>
+							<a class="page-scroll" href="#section-five">Portfolio</a>
+							<a class="page-scroll" href="#section-eight">Contact</a>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
+		</footer>
 		<!--! AKHIR FOOTER -->
 
 		<!--! Optional JavaScript -->
