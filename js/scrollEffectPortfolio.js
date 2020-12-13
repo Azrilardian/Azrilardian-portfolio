@@ -1,13 +1,4 @@
 window.addEventListener("scroll", function () {
-	function scrollEffect(el) {
-		let element = document.querySelectorAll(el);
-		for (let i = 0; i < element.length; i++) {
-			let elementPosition = element[i].getBoundingClientRect().top;
-			let screenPosition = window.innerHeight / 1.4;
-			if (elementPosition < screenPosition) element[i].classList.add("muncul");
-		}
-	}
-
 	function scrollEffectEach(el) {
 		let element = document.querySelectorAll(el);
 		let jumlah = element.length;
@@ -22,8 +13,5 @@ window.addEventListener("scroll", function () {
 			}, 350);
 		}
 	}
-	scrollEffect(".feature-parallax");
-	scrollEffect(".team-parallax");
-	scrollEffect(".progress-parallax");
-	scrollEffectEach(".service");
+	scrollEffectEach(".portfolio-parallax");
 });
