@@ -1,11 +1,9 @@
 window.addEventListener("scroll", function () {
 	function scrollEffect(el) {
-		let element = document.querySelectorAll(el);
-		for (let i = 0; i < element.length; i++) {
-			let elementPosition = element[i].getBoundingClientRect().top;
-			let screenPosition = window.innerHeight / 1.4;
-			if (elementPosition < screenPosition) element[i].classList.add("muncul");
-		}
+		let element = document.querySelector(el);
+		let elementPosition = element.getBoundingClientRect().top;
+		let screenPosition = window.innerHeight / 1.4;
+		if (elementPosition < screenPosition) element.classList.add("muncul");
 	}
 
 	function scrollEffectEach(el) {
@@ -22,8 +20,7 @@ window.addEventListener("scroll", function () {
 			}, 350);
 		}
 	}
-	scrollEffect(".feature-parallax");
+	scrollEffectEach(".feature-parallax");
 	scrollEffect(".team-parallax");
-	scrollEffect(".progress-parallax");
 	scrollEffectEach(".service");
 });
