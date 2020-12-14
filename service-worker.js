@@ -64,6 +64,8 @@ let fileToCache = [
 	"./js/scrollEffectPortfolio.js",
 	"./js/scrollEffectSkills.js",
 	"./js/typeWritting.js",
+	"./index.html",
+	"./home.html",
 	"./portfolio.html",
 	"./certificate.html",
 ];

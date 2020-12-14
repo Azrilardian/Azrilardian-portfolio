@@ -5,11 +5,60 @@ if ("serviceWorker" in navigator) {
 		.catch((err) => console.log("Registration Failed", err));
 }
 
+const spaActivation = () => {
+	let page = window.location.hash.substr(1);
+	if (page == "") page = "home";
+
+	document.addEventListener("click", (e) => {
+		if (e.target.classList.contains("all-portfolio") || e.target.classList.contains("all-certificate")) {
+			page = e.target.getAttribute("href").substr(1);
+			if (page == "portfolio" || page == "certificate") setBackToHome();
+			data();
+		}
+	});
+
+	const setBackToHome = () => {
+		const navigation = document.querySelectorAll("nav ul li a");
+		navigation.forEach((e) =>
+			e.addEventListener("click", () => {
+				page = "home";
+				data();
+			})
+		);
+	};
+
+	const loadPage = (page) => {
+		return fetch(page).then((res) => {
+			if (res.status === 200) return res.text();
+			else if (res.status === 404) {
+				const navContainer = document.querySelector("header nav");
+				navContainer.classList.add("black");
+				return `<p class="error-404">Yaah, halamannya gak ada :(</p>`;
+			}
+			return `<p style="text-align : center">Yaah, halamannya gak ada :(</p>`;
+		});
+	};
+
+	const data = async () => {
+		try {
+			const pageContainer = document.querySelector(".pages-render");
+			const pages = await loadPage(`./${page}.html`);
+			window.scrollTo(0, 0);
+			pageContainer.innerHTML = pages;
+		} catch (err) {
+			alert(err);
+		}
+	};
+	if (page == "portfolio" || page == "certificate") setBackToHome();
+	data();
+};
+spaActivation();
+
 $(".page-scroll").on("click", function (e) {
 	// ambil isi href
-	var tujuan = $(this).attr("href");
+	let tujuan = $(this).attr("href");
 	// tangkap elemen ybs
-	var elemenTujuan = $(tujuan);
+	let elemenTujuan = $(tujuan);
 
 	// pindahkan scroll
 	$("html,body").animate(
@@ -21,10 +70,6 @@ $(".page-scroll").on("click", function (e) {
 	);
 
 	e.preventDefault();
-
-	$(".jumbotron h1").css({
-		transform: "translate(0px, " + wScroll / 4 + "%)",
-	});
 });
 
 function navigation() {
@@ -57,7 +102,8 @@ function loading() {
 	const section = document.querySelectorAll("section");
 	const footer = document.querySelector("footer");
 	const header = document.querySelector("header");
-	const allSection = [body, footer, header];
+	const pagesRender = document.querySelector(".pages-render");
+	const allSection = [body, footer, header, pagesRender];
 
 	section.forEach((e) => allSection.push(e));
 	allSection.map((e) => e.classList.add("loading"));
@@ -71,14 +117,3 @@ function loading() {
 	});
 }
 loading();
-
-// const certficateFocus = () => {
-// 	const certificates = document.querySelectorAll(".certificate-parallax .img-container");
-// 	certificates.forEach((certificate) => {
-// 		certificate.addEventListener("click", function (e) {
-// 			certificates.forEach((el) => el.classList.remove("click"));
-// 			this.classList.add("click");
-// 		});
-// 	});
-// };
-// certficateFocus();

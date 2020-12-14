@@ -50,6 +50,11 @@ body::-webkit-scrollbar-thumb {
 	background-color: var(--default-blue-color);
 }
 
+p.error-404 {
+	text-align: center;
+	margin: 10px 0;
+}
+
 /* Akhir Uttility */
 
 /* Loading */
@@ -60,6 +65,7 @@ html body.loading {
 	overflow-y: scroll;
 }
 
+.pages-render.loading,
 section.loading,
 header.loading,
 footer.loading {

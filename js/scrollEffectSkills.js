@@ -21,5 +21,8 @@ window.addEventListener("scroll", function () {
 			scssProgressBar.style.width = "80%";
 		}
 	}
-	scrollEffect(".progresss");
+	if (document.querySelector(".progresss")) scrollEffect(".progresss");
+	else {
+		return;
+	}
 });

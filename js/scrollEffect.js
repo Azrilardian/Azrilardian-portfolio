@@ -17,10 +17,14 @@ window.addEventListener("scroll", function () {
 				element[mulai].classList.add("muncul");
 				mulai++;
 				if (mulai == jumlah) clearInterval(interval);
-			}, 350);
+			}, 250);
 		}
 	}
-	scrollEffectEach(".feature-parallax");
-	scrollEffect(".team-parallax");
-	scrollEffectEach(".service");
+	if (document.querySelector(".feature-parallax") && document.querySelector(".team-parallax") && document.querySelector(".service")) {
+		scrollEffectEach(".feature-parallax");
+		scrollEffect(".team-parallax");
+		scrollEffectEach(".service");
+	} else {
+		return;
+	}
 });

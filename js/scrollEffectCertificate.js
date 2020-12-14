@@ -10,8 +10,11 @@ window.addEventListener("scroll", function () {
 				element[mulai].classList.add("muncul");
 				mulai++;
 				if (mulai == jumlah) clearInterval(interval);
-			}, 350);
+			}, 250);
 		}
 	}
-	scrollEffectEach(".certificate-parallax");
+	if (document.querySelector(".certificate-parallax")) scrollEffectEach(".certificate-parallax");
+	else {
+		return;
+	}
 });
