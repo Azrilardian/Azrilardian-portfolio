@@ -1132,6 +1132,10 @@ footer .menu a:hover {
 		transition: 0.3s;
 	}
 
+	.progress-style {
+		padding: 0 30px;
+	}
+
 	.services-section,
 	.features-section .feature {
 		padding: 0 30px;
