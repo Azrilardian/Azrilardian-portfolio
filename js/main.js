@@ -1,4 +1,10 @@
-// SMOTH SCROLL
+if ("serviceWorker" in navigator) {
+	navigator.serviceWorker
+		.register("./service-worker.js")
+		.then(() => console.log("Succes Registration Service Worker"))
+		.catch((err) => console.log("Registration Failed", err));
+}
+
 $(".page-scroll").on("click", function (e) {
 	// ambil isi href
 	var tujuan = $(this).attr("href");
