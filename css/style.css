@@ -1,3 +1,18 @@
+@font-face {
+	font-family: "Poppins";
+	src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Source Sans Pro Light";
+	src: url("../fonts/SourceSansPro-ExtraLight.ttf");
+}
+
+@font-face {
+	font-family: "Source Sans Pro Regular";
+	src: url("../fonts/SourceSansPro-Regular.ttf");
+}
+
 html body {
 	font-family: "poppins", sans-serif;
 	overflow-x: hidden;
@@ -136,7 +151,7 @@ header {
 	position: sticky;
 	top: 0;
 	z-index: 99 !important;
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "Source Sans Pro Regular", sans-serif;
 }
 
 header nav {
@@ -205,7 +220,7 @@ header .burger {
 	background-size: cover;
 	color: #fff;
 	margin-top: -70px; /* Relative mengikuti tinggi navbar */
-	font-family: "Source Sans Pro", sans-serif;
+	font-family: "Source Sans Pro Light", sans-serif;
 }
 
 .content .row {
