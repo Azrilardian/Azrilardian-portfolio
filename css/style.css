@@ -1,6 +1,7 @@
 html body {
 	font-family: "poppins", sans-serif;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }
 
 /* Uttility */
@@ -200,7 +201,7 @@ header .burger {
 
 .jumbotron {
 	height: 100vh;
-	background: var(--default-blue-color) url(../img/bg.jpg) no-repeat fixed center;
+	background: #142e3d url(../img/bg.jpg) no-repeat fixed center;
 	background-size: cover;
 	color: #fff;
 	margin-top: -70px; /* Relative mengikuti tinggi navbar */
@@ -1095,6 +1096,12 @@ footer .menu a:hover {
 	.col.header h1 {
 		font-size: 30px;
 	}
+
+	.error-404 img {
+		height: auto;
+		width: 300px !important;
+	}
+
 	.img-loading img {
 		width: 130px;
 		height: auto;
@@ -1189,6 +1196,12 @@ footer .menu a:hover {
 	p {
 		font-size: 13px !important;
 	}
+
+	.error-404 img {
+		height: auto;
+		width: 250px;
+	}
+
 	.features-section,
 	.skills-section,
 	.services-section,

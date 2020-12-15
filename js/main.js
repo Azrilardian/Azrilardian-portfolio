@@ -1,5 +1,4 @@
-// Use in 3 Function
-const navContainer = document.querySelector("header nav");
+const navContainer = document.querySelector("header nav"); // Use in 3 Function
 
 if ("serviceWorker" in navigator) {
 	navigator.serviceWorker

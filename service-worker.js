@@ -1,4 +1,4 @@
-let CACHE_NAME = "static-cache";
+let CACHE_NAME = "static-cacheV1";
 let fileToCache = [
 	"./css/Bootstrap-4.5.2/bootstrap.min.css",
 	"./css/style.css",
