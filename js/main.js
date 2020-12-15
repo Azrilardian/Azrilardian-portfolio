@@ -1,3 +1,6 @@
+// Use in 3 Function
+const navContainer = document.querySelector("header nav");
+
 if ("serviceWorker" in navigator) {
 	navigator.serviceWorker
 		.register("./service-worker.js")
@@ -12,7 +15,7 @@ const spaActivation = () => {
 	document.addEventListener("click", (e) => {
 		if (e.target.classList.contains("all-portfolio") || e.target.classList.contains("all-certificate")) {
 			page = e.target.getAttribute("href").substr(1);
-			if (page == "portfolio" || page == "certificate") setBackToHome();
+			if (page != "home") setBackToHome();
 			data();
 		}
 	});
@@ -30,26 +33,54 @@ const spaActivation = () => {
 	const loadPage = (page) => {
 		return fetch(page).then((res) => {
 			if (res.status === 200) return res.text();
-			else if (res.status === 404) {
-				const navContainer = document.querySelector("header nav");
-				navContainer.classList.add("black");
-				return `<p class="error-404">Yaah, halamannya gak ada :(</p>`;
-			}
-			return `<p style="text-align : center">Yaah, halamannya gak ada :(</p>`;
+			else if (res.status === 404) return error404();
+			return errorRender();
 		});
 	};
 
+	const keepNavbarBlack = () => {
+		navContainer.classList.add("black");
+		window.addEventListener("scroll", () => {
+			if (pageYOffset <= 100) navContainer.classList.add("black");
+		});
+	};
+
+	const error404 = () => {
+		keepNavbarBlack();
+		return `<div class="error-404 d-flex justify-content-center align-items-center flex-column">
+					<img src="./img/undraw_page_not_found_su7k.svg" alt="img-error-404" />
+					<p class="mt-3 bold">Page Not Found</p>
+				</div>`;
+	};
+
+	const errorRender = () => {
+		keepNavbarBlack();
+		return `<div class="error-404 d-flex justify-content-center align-items-center flex-column">
+					<img src="./img/undraw_page_not_found_su7k.svg" alt="img-error-render" />
+					<p class="mt-3 bold">OOPS. Something Wrong :(</p>
+				</div>`;
+	};
+
+	const errorFetch = (err) => {
+		keepNavbarBlack();
+		return `<div class="error-404 d-flex justify-content-center align-items-center flex-column">
+					<img src="./img/undraw_server_down_s4lk.svg" alt="img-error-fetch" />
+					<p class="mt-3 bold">OOPS. ${err}</p>
+				</div>`;
+	};
+
 	const data = async () => {
+		const pageContainer = document.querySelector(".pages-render");
 		try {
-			const pageContainer = document.querySelector(".pages-render");
 			const pages = await loadPage(`./${page}.html`);
 			window.scrollTo(0, 0);
 			pageContainer.innerHTML = pages;
 		} catch (err) {
-			alert(err);
+			window.scrollTo(0, 0);
+			pageContainer.innerHTML = errorFetch(err);
 		}
 	};
-	if (page == "portfolio" || page == "certificate") setBackToHome();
+	if (page !== "home") setBackToHome();
 	data();
 };
 spaActivation();
@@ -73,7 +104,6 @@ $(".page-scroll").on("click", function (e) {
 });
 
 function navigation() {
-	const navContainer = document.querySelector("header nav");
 	const burgerDiv = document.querySelectorAll(".burger div");
 	const ul = document.querySelector("header nav ul");
 	const li = document.querySelectorAll("header nav ul li");

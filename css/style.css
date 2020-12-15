@@ -49,10 +49,12 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
 	background-color: var(--default-blue-color);
 }
-
-p.error-404 {
-	text-align: center;
-	margin: 10px 0;
+.error-404 {
+	height: 82vh;
+}
+.error-404 img {
+	height: auto;
+	width: 400px;
 }
 
 /* Akhir Uttility */
