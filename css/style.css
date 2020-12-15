@@ -1,7 +1,6 @@
 html body {
 	font-family: "poppins", sans-serif;
 	overflow-x: hidden;
-	scroll-behavior: smooth;
 }
 
 /* Uttility */
@@ -319,6 +318,7 @@ header .burger {
 
 .features-section {
 	margin: 150px 0;
+	overflow: hidden;
 }
 
 .feature div {
@@ -369,7 +369,7 @@ header .burger {
 	transition: 0.4s ease;
 }
 
-.features-section .feature:hover i {
+.features-section .feature-parallax:hover i {
 	filter: drop-shadow(0 0 15px #2aaeeb);
 }
 
@@ -381,7 +381,7 @@ header .burger {
 	transition: 0.4s ease;
 }
 
-.feature:hover h3 {
+.feature div:hover h3 {
 	color: #f8f8f8;
 }
 
@@ -392,7 +392,7 @@ header .burger {
 	transition: 0.4s ease;
 }
 
-.feature:hover p {
+.feature div:hover p {
 	color: #f8f8f8;
 }
 
@@ -438,6 +438,7 @@ header .burger {
 
 .services-section {
 	margin: 150px 0;
+	overflow: hidden;
 }
 
 .services-section .service {
