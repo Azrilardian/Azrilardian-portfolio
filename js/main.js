@@ -21,12 +21,7 @@ const spaActivation = () => {
 
 	const setBackToHome = () => {
 		const navigation = document.querySelectorAll("nav ul li a");
-		navigation.forEach((e) =>
-			e.addEventListener("click", () => {
-				page = "home";
-				data();
-			})
-		);
+		navigation.forEach((e) => e.addEventListener("click", () => (window.location.href = "./index.html")));
 	};
 
 	const loadPage = (page) => {
@@ -95,7 +90,7 @@ $(".page-scroll").on("click", function (e) {
 		{
 			scrollTop: elemenTujuan.offset().top - 100,
 		},
-		1250,
+		950,
 		"easeInOutExpo"
 	);
 
