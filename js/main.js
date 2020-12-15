@@ -79,23 +79,28 @@ const spaActivation = () => {
 };
 spaActivation();
 
-$(".page-scroll").on("click", function (e) {
-	// ambil isi href
-	let tujuan = $(this).attr("href");
-	// tangkap elemen ybs
-	let elemenTujuan = $(tujuan);
+const smoothScroll = () => {
+	setTimeout(() => {
+		$(".page-scroll").on("click", function (e) {
+			// ambil isi href
+			let tujuan = $(this).attr("href");
+			// tangkap elemen ybs
+			let elemenTujuan = $(tujuan);
 
-	// pindahkan scroll
-	$("html,body").animate(
-		{
-			scrollTop: elemenTujuan.offset().top - 100,
-		},
-		950,
-		"easeInOutExpo"
-	);
+			// pindahkan scroll
+			$("html,body").animate(
+				{
+					scrollTop: elemenTujuan.offset().top - 100,
+				},
+				950,
+				"easeInOutExpo"
+			);
 
-	e.preventDefault();
-});
+			e.preventDefault();
+		});
+	}, 1000);
+};
+smoothScroll();
 
 function navigation() {
 	const burgerDiv = document.querySelectorAll(".burger div");
