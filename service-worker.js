@@ -71,6 +71,10 @@ let fileToCache = [
 	"./home.html",
 	"./portfolio.html",
 	"./certificate.html",
+	"./fonts/Poppins-Regular.ttf",
+	"./fonts/SourceSansPro-ExtraLight.ttf",
+	"./fonts/SourceSansPro-Regular.ttf",
+	"./favicon.ico",
 ];
 
 self.addEventListener("install", (e) => e.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(fileToCache))));

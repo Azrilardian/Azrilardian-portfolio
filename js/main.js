@@ -1,11 +1,11 @@
 const navContainer = document.querySelector("header nav"); // Use in 3 Function
 
-// if ("serviceWorker" in navigator) {
-// 	navigator.serviceWorker
-// 		.register("./service-worker.js")
-// 		.then(() => console.log("Succes Registration Service Worker"))
-// 		.catch((err) => console.log("Registration Failed", err));
-// }
+if ("serviceWorker" in navigator) {
+	navigator.serviceWorker
+		.register("./service-worker.js")
+		.then(() => console.log("Succes Registration Service Worker"))
+		.catch((err) => console.log("Registration Failed", err));
+}
 
 const spaActivation = () => {
 	let page = window.location.hash.substr(1);
