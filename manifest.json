@@ -4,7 +4,7 @@
 	"display": "standalone",
 	"scope": "/",
 	"start_url": "/index.html",
-	"app_name": "Azril Ardian Portfolio",
+	"name": "Azril Ardia Portfolio",
 	"short_name": "Azril Ardian",
 	"description": "Website Portfolio Azril Ardian",
 	"icons": [
