@@ -4,7 +4,7 @@ window.addEventListener("scroll", function () {
 		let jumlah = element.length;
 		let mulai = 0;
 		let elementPosition = element[mulai].getBoundingClientRect().top;
-		let screenPosition = window.innerHeight / 1.4;
+		let screenPosition = window.innerHeight / 0.9;
 		if (elementPosition < screenPosition) {
 			const interval = setInterval(function () {
 				element[mulai].classList.add("muncul");

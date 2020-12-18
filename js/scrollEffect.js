@@ -2,7 +2,7 @@ window.addEventListener("scroll", function () {
 	function scrollEffect(el) {
 		let element = document.querySelector(el);
 		let elementPosition = element.getBoundingClientRect().top;
-		let screenPosition = window.innerHeight / 1.4;
+		let screenPosition = window.innerHeight / 1.2;
 		if (elementPosition < screenPosition) element.classList.add("muncul");
 	}
 
@@ -11,7 +11,7 @@ window.addEventListener("scroll", function () {
 		let jumlah = element.length;
 		let mulai = 0;
 		let elementPosition = element[mulai].getBoundingClientRect().top;
-		let screenPosition = window.innerHeight / 1.4;
+		let screenPosition = window.innerHeight / 1.3;
 		if (elementPosition < screenPosition) {
 			const interval = setInterval(function () {
 				element[mulai].classList.add("muncul");

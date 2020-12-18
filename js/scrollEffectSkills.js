@@ -9,7 +9,7 @@ window.addEventListener("scroll", function () {
 		const webpackProgressBar = document.querySelector(".webpack-skills");
 		const scssProgressBar = document.querySelector(".scss-skills");
 		let elementPosition = element.getBoundingClientRect().top;
-		let screenPosition = window.innerHeight / 1.4;
+		let screenPosition = window.innerHeight / 1.2;
 		if (elementPosition == 0) return;
 		if (elementPosition < screenPosition) {
 			htmlProgressBar.style.width = "100%";
