@@ -98,7 +98,7 @@ const smoothScroll = () => {
 
 			e.preventDefault();
 		});
-	}, 1000);
+	}, 2000);
 };
 smoothScroll();
 

@@ -53,5 +53,5 @@ document.addEventListener("DOMContentLoaded", () => {
 			new typeWritter(txtElement, words, wait);
 		}
 		init();
-	}, 1000);
+	}, 2000);
 });
