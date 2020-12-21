@@ -19,9 +19,9 @@ let fileToCache = [
 	"./img/Certificate/Progate Certificate - Sass-1.jpg",
 	"./img/Certificate/Udemy Certificate - Front End Web Development.jpg",
 	"./img/Certificate/Udemy Certificate - Modern Javascript for React Js - ES6.jpg",
-	"./img/absen-one.png",
-	"./img/absen-two.png",
-	"./img/absen-three.png",
+	"./img/absen-one.jpg",
+	"./img/absen-two.jpg",
+	"./img/absen-three.jpg",
 	"./img/bg.jpg",
 	"./img/bg2.jpg",
 	"./img/elciqiiu.jpg",
@@ -29,10 +29,10 @@ let fileToCache = [
 	"./img/imagine-home.jpg",
 	"./img/kalkulator.jpg",
 	"./img/lorem-about.jpg",
-	"./img/lorem-features.jpg",
+	"./img/lorem-features.png",
 	"./img/lorem-home.jpg",
 	"./img/lorem-portfolio.jpg",
-	"./img/lorem-signup.jpg",
+	"./img/lorem-signup.png",
 	"./img/personal-about.jpg",
 	"./img/personal-blog.jpg",
 	"./img/personal-contact.jpg",
@@ -75,12 +75,18 @@ let fileToCache = [
 	"./fonts/SourceSansPro-ExtraLight.ttf",
 	"./fonts/SourceSansPro-Regular.ttf",
 	"./favicon.ico",
+	"./manifest.json",
+	"./img/Manifest-Icon/icon-512x512.png",
+	"./css/fontawesome 5.13.0/css/all.min.css",
+	"./css/fontawesome 5.13.0/css/v4-shims.min.css",
+	"./css/fontawesome 5.13.0/webfonts/fa-brands-400.woff2",
+	"./css/fontawesome 5.13.0/webfonts/fa-solid-900.woff2",
 ];
 
 self.addEventListener("install", (e) => e.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(fileToCache))));
 
+self.addEventListener("fetch", (e) => e.respondWith(caches.match(e.request).then((res) => (res ? res : fetch(e.request)))));
+
 self.addEventListener("activate", (event) => {
 	event.waitUntil(caches.keys().then((cacheNames) => Promise.all(cacheNames.filter((cacheName) => cacheName != CACHE_NAME).map((cacheName) => caches.delete(cacheName)))));
 });
-
-self.addEventListener("fetch", (e) => e.respondWith(caches.match(e.request).then((res) => (res ? res : fetch(e.request)))));

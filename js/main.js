@@ -3,7 +3,7 @@ const navContainer = document.querySelector("header nav"); // Use in 3 Function
 if ("serviceWorker" in navigator) {
 	navigator.serviceWorker
 		.register("./service-worker.js")
-		.then(() => console.log("Succes Registration Service Worker"))
+		.then(() => console.log("Service Worker Active"))
 		.catch((err) => console.log("Registration Failed", err));
 }
 

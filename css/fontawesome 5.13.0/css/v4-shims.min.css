@@ -1,0 +1,10 @@
+.fa.fa-facebook,
+.fa.fa-twitter,
+.fa.fa-instagram,
+.fa.fa-whatsapp {
+	font-family: "Font Awesome 5 Brands";
+	font-weight: 400;
+}
+.fa.fa-facebook:before {
+	content: "\f39e";
+}

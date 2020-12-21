@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Poppins";
-	src: url("../fonts/Poppins/Poppins-Regular.ttf");
+	src: url("../fonts/Poppins-Regular.ttf");
 }
 
 @font-face {
@@ -150,7 +150,7 @@ a#button-to-top.show {
 header {
 	position: sticky;
 	top: 0;
-	z-index: 99 !important;
+	z-index: 99;
 	font-family: "Source Sans Pro Regular", sans-serif;
 }
 
@@ -380,7 +380,7 @@ header .burger {
 }
 
 .features-section .feature i {
-	font-size: 35px;
+	font-size: 25px;
 	color: var(--default-blue-color);
 	transition: 0.4s ease;
 }
@@ -430,7 +430,6 @@ header .burger {
 	padding-top: 40px;
 	line-height: 24px;
 	margin-top: 10px;
-	color: #777;
 	font-weight: 400;
 	margin-bottom: 0;
 }
