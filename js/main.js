@@ -1,11 +1,11 @@
 const navContainer = document.querySelector("header nav"); // Use in 3 Function
 
-if ("serviceWorker" in navigator) {
-	navigator.serviceWorker
-		.register("./service-worker.js")
-		.then(() => console.log("Service Worker Active"))
-		.catch((err) => console.log("Registration Failed", err));
-}
+// if ("serviceWorker" in navigator) {
+// 	navigator.serviceWorker
+// 		.register("./service-worker.js")
+// 		.then(() => console.log("Service Worker Active"))
+// 		.catch((err) => console.log("Registration Failed", err));
+// }
 
 const spaActivation = () => {
 	let page = window.location.hash.substr(1);
@@ -146,3 +146,25 @@ function loading() {
 	});
 }
 loading();
+
+const seeMoreTools = () => {
+	if (document.querySelector(".expertness")) {
+		const seeMoreToolsText = document.querySelector(".see-tools");
+		const toolsHeading = document.querySelector(".row:nth-child(4)");
+		const toolsContainer = document.querySelector(".tools-container");
+		seeMoreToolsText.addEventListener("click", function () {
+			toolsHeading.style.display = "block";
+			toolsContainer.style.display = "flex";
+			setTimeout(() => {
+				document.querySelector(".figma-tools").style.width = "60%";
+				document.querySelector(".adobeXD-tools").style.width = "60%";
+				document.querySelector(".vegas-tools").style.width = "60%";
+				document.querySelector(".coreldraw-tools").style.width = "40%";
+				document.querySelector(".sketchup-tools").style.width = "60%";
+			}, 100);
+			this.style.display = "none";
+		});
+	}
+};
+
+setTimeout(() => seeMoreTools(), 2000);
