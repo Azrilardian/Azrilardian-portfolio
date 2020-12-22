@@ -450,6 +450,10 @@ header .burger {
 .expertness .see-tools {
 	font-weight: bold;
 	cursor: pointer;
+	transition: 0.2s ease;
+}
+.expertness .see-tools:hover {
+	color: var(--default-blue-color);
 }
 
 .expertness .row:nth-child(4),
