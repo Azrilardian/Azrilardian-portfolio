@@ -89,6 +89,8 @@ header.loading,
 footer.loading {
 	opacity: 0;
 	display: none !important;
+	will-change: opacity;
+	will-change: display;
 }
 
 .img-loading {
@@ -130,6 +132,8 @@ a#button-to-top {
 	z-index: 999;
 	cursor: pointer;
 	text-decoration: none;
+	will-change: background-color;
+	will-change: opacity;
 }
 
 a#button-to-top span {
@@ -172,6 +176,7 @@ header a.logo {
 	text-decoration: none;
 	color: white;
 	transition: 0.3s ease;
+	will-change: color;
 }
 
 header a:hover {
@@ -204,6 +209,7 @@ header .burger {
 	border-radius: 5px;
 	background-color: white;
 	transition: 0.3s ease;
+	will-change: background-color;
 }
 
 .burger:hover div {
@@ -276,6 +282,9 @@ header .burger {
 	font-weight: 600;
 	letter-spacing: 2px;
 	transition: 0.3s ease;
+	will-change: background-color;
+	will-change: border-color;
+	will-change: color;
 }
 
 .content a.discover-more-btn:hover {
@@ -293,6 +302,7 @@ header .burger {
 	text-decoration: none;
 	color: #fff;
 	transition: 0.3s;
+	will-change: color;
 }
 
 .content .down a:hover {
@@ -322,6 +332,7 @@ header .burger {
 	color: #98999c;
 	text-decoration: none;
 	transition: 0.3s;
+	will-change: color;
 }
 
 .blog-jumbotron a:hover {
@@ -335,6 +346,7 @@ header .burger {
 .features-section {
 	margin: 150px 0;
 	overflow: hidden;
+	content-visibility: auto;
 }
 
 .feature div {
@@ -355,6 +367,7 @@ header .burger {
 	height: 100%;
 	z-index: -1;
 	background-color: #1f1f1f;
+	will-change: width;
 }
 
 .feature div:hover::before {
@@ -364,6 +377,7 @@ header .burger {
 .feature .feature-parallax {
 	opacity: 0;
 	transition: 0.6s;
+	content-visibility: auto;
 }
 
 .feature .feature-parallax.left {
@@ -395,6 +409,7 @@ header .burger {
 	margin: 10px 0;
 	color: #1f1f1f;
 	transition: 0.4s ease;
+	will-change: color;
 }
 
 .feature div:hover h3 {
@@ -406,6 +421,7 @@ header .burger {
 	font-weight: 300;
 	color: #1f1f1f;
 	transition: 0.4s ease;
+	will-change: color;
 }
 
 .feature div:hover p {
@@ -420,6 +436,7 @@ header .burger {
 	margin: 150px 0;
 	padding: 70px 0;
 	background-color: #f0f0f042;
+	content-visibility: auto;
 }
 
 .expertness {
@@ -439,7 +456,8 @@ header .burger {
 	margin: 40px 0;
 }
 .expertness .progress {
-	border: 3px solid rgb(233, 233, 233);
+	border: 3px solid #e9e9e9;
+	content-visibility: auto;
 }
 .expertness .progress-bar {
 	background-image: linear-gradient(to right, #6da0ff, var(--default-blue-color));
@@ -451,6 +469,7 @@ header .burger {
 	font-weight: bold;
 	cursor: pointer;
 	transition: 0.2s ease;
+	will-change: color;
 }
 .expertness .see-tools:hover {
 	color: var(--default-blue-color);
@@ -468,12 +487,14 @@ header .burger {
 .services-section {
 	margin: 150px 0;
 	overflow: hidden;
+	content-visibility: auto;
 }
 
 .services-section .service {
 	opacity: 0;
 	transition: 0.7s;
 	transform: translate(-100%, 0);
+	content-visibility: auto;
 }
 
 .services-section .service.muncul {
@@ -513,6 +534,7 @@ header .burger {
 	transition: 0.5s;
 	position: relative;
 	border-radius: 3px;
+	will-change: color;
 }
 
 .services-section a.contact-btn:hover {
@@ -529,6 +551,7 @@ header .burger {
 	width: 100%;
 	transition: 0.5s;
 	z-index: -1;
+	will-change: height;
 }
 
 .services-section a.contact-btn:hover::before {
@@ -543,12 +566,14 @@ header .burger {
 	margin: 150px 0;
 	padding: 70px 0 60px;
 	background-color: #f0f0f042;
+	content-visibility: auto;
 }
 
 .section-five .portfolio-parallax {
 	opacity: 0;
 	transition: 0.5s;
 	transform: translate(0, 100px);
+	content-visibility: auto;
 }
 
 .section-five .portfolio-parallax.muncul {
@@ -577,6 +602,7 @@ header .burger {
 	padding: 40px;
 	transition: 0.5s;
 	position: relative;
+	content-visibility: auto;
 }
 
 .portfolio-parallax div img {
@@ -620,6 +646,7 @@ header .burger {
 	border: 2px solid var(--default-blue-color);
 	border-radius: 25px;
 	transition: 0.5s;
+	will-change: background-color;
 }
 
 .portfolio-parallax div span a:hover {
@@ -692,6 +719,7 @@ header .burger {
 
 .certificates-section {
 	margin: 150px 0;
+	content-visibility: auto;
 }
 
 .certificate-parallax .img-container {
@@ -699,6 +727,7 @@ header .burger {
 	position: relative;
 	cursor: pointer;
 	overflow: hidden;
+	content-visibility: auto;
 }
 
 .certificate-parallax .img-container::before {
@@ -806,6 +835,7 @@ header .burger {
 	border: 2px solid #2aadeb;
 	border-radius: 25px;
 	transition: 0.5s;
+	will-change: background-color;
 }
 
 .certificate-parallax.nonaktif span a:hover {
@@ -816,6 +846,10 @@ header .burger {
 
 /* Preview Section */
 
+.preview-section {
+	content-visibility: auto;
+}
+
 .preview-section .project {
 	background-image: linear-gradient(#000000cc, #000000cc), url(../img/bg2.jpg);
 	background-position: center;
@@ -823,6 +857,7 @@ header .burger {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	padding: 50px 0;
+	content-visibility: auto;
 }
 
 .preview-section h1 {
@@ -855,6 +890,7 @@ header .burger {
 	position: relative;
 	border-radius: 3px;
 	z-index: 9;
+	will-change: color;
 }
 
 .preview-section a:hover {
@@ -871,6 +907,7 @@ header .burger {
 	width: 0%;
 	transition: 0.5s;
 	z-index: -9;
+	will-change: 100%;
 }
 
 .preview-section a:hover::before {
@@ -883,6 +920,7 @@ header .burger {
 
 .team-section {
 	margin: 150px 0;
+	content-visibility: auto;
 }
 
 .team-section .team-parallax {
@@ -907,18 +945,8 @@ header .burger {
 	transform: scale(0.9);
 	overflow: hidden;
 	position: relative;
-}
-
-.team-parallax .img-container span {
-	display: block;
-	position: absolute;
-	background-color: #000000b2;
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	transition: 0.3s;
+	will-change: filter;
+	will-change: border;
 }
 
 .team-parallax .img-container:hover {
@@ -934,10 +962,23 @@ header .burger {
 	opacity: 1;
 }
 
+.team-parallax .img-container span {
+	display: block;
+	position: absolute;
+	background-color: #000000b2;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: 0.3s;
+}
+
 .team-parallax .img-container span i {
 	margin: 0 10px;
 	font-size: 20px;
 	color: var(--default-blue-color);
+	will-change: color;
 }
 
 .team-parallax .img-container span i:hover {
@@ -980,6 +1021,7 @@ footer p a {
 footer .menu a {
 	padding: 0 5px;
 	transition: 0.3s;
+	will-change: color;
 }
 
 footer .menu a:hover {
