@@ -103,15 +103,17 @@ const smoothScroll = () => {
 smoothScroll();
 
 function navigation() {
+	const bodyOverlay = document.querySelector(".body-overlay");
 	const burgerDiv = document.querySelectorAll(".burger div");
 	const ul = document.querySelector("header nav ul");
 	const li = document.querySelectorAll("header nav ul li");
 
 	let burger = document.querySelector(".burger");
 	burger.addEventListener("click", function () {
+		bodyOverlay.classList.toggle("active");
 		ul.classList.toggle("nav-active");
 		this.classList.toggle("toggle");
-		li.forEach((links, index) => (links.style.animation ? (links.style.animation = "") : (links.style.animation = "liFadeIn 0.2s ease forwards " + (index / 7 + 0.3) + "s")));
+		li.forEach((links, index) => (links.style.animation ? (links.style.animation = "") : (links.style.animation = "liFadeIn 0.2s ease forwards " + index / 8 + "s")));
 		burgerDiv.forEach((e) => e.classList.toggle("active"));
 	});
 
@@ -153,6 +155,7 @@ const seeMoreTools = () => {
 		const toolsHeading = document.querySelector(".row:nth-child(4)");
 		const toolsContainer = document.querySelector(".tools-container");
 		seeMoreToolsText.addEventListener("click", function () {
+			this.style.display = "none";
 			toolsHeading.style.display = "block";
 			toolsContainer.style.display = "flex";
 			setTimeout(() => {
@@ -162,9 +165,29 @@ const seeMoreTools = () => {
 				document.querySelector(".coreldraw-tools").style.width = "40%";
 				document.querySelector(".sketchup-tools").style.width = "60%";
 			}, 100);
-			this.style.display = "none";
 		});
 	}
 };
 
 setTimeout(() => seeMoreTools(), 2000);
+
+const cekUserOffline = () => {
+	let isOffline = navigator.onLine;
+	const bodyOverlay = document.querySelector(".body-overlay");
+	const offlinePopup = document.querySelector(".offline-popup");
+	const btnKeepMeStay = document.querySelector("button:first-child");
+	const btnGoToSetting = document.querySelector("button:last-child");
+
+	const whenButtonClick = () => {
+		bodyOverlay.classList.remove("active");
+		offlinePopup.classList.remove("active");
+	};
+
+	if (isOffline) {
+		bodyOverlay.classList.add("active");
+		offlinePopup.classList.add("active");
+	}
+	btnKeepMeStay.addEventListener("click", () => whenButtonClick());
+	btnGoToSetting.addEventListener("click", () => whenButtonClick());
+};
+cekUserOffline();

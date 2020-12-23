@@ -44,6 +44,23 @@ span::selection {
 	color: var(--default-blue-color);
 }
 
+.body-overlay {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	z-index: 99;
+	background-color: transparent;
+	content-visibility: hidden;
+	visibility: hidden;
+	transition: 0.3 ease;
+	will-change: background-color;
+}
+.body-overlay.active {
+	background-color: #000000bd;
+	content-visibility: auto;
+	visibility: visible;
+}
+
 section .col.header h1 {
 	font-weight: 600;
 }
@@ -114,7 +131,64 @@ footer.loading {
 	font-weight: 600;
 }
 
-/* Loading */
+/* Akhir Loading */
+
+/* Offline Pop up */
+
+.offline-popup {
+	position: fixed;
+	top: 100%;
+	left: 50%;
+	transform: translate(-50%, 100%);
+	padding: 40px 0;
+	width: 500px;
+	background-color: white;
+	z-index: 999;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	transition: 0.3s ease;
+	content-visibility: hidden;
+	visibility: hidden;
+	filter: drop-shadow(2px 3px 7px #3838383a);
+}
+.offline-popup.active {
+	content-visibility: auto;
+	visibility: visible;
+	transform: translate(-50%, -100%);
+}
+
+.offline-popup img {
+	width: 80px;
+	height: auto;
+}
+
+.offline-popup p {
+	margin-top: 10px;
+	font-weight: 600;
+}
+
+.offline-popup button {
+	border-radius: 10px;
+	padding: 10px 15px;
+	margin: 5px;
+	border: 2px solid transparent;
+	font-size: 14px;
+	transition: 0.2s ease;
+	will-change: border;
+	outline: none;
+}
+.offline-popup button:focus {
+	border: 2px solid #1c86b8;
+}
+.offline-popup button:first-child {
+	background-color: whitesmoke;
+}
+.offline-popup button:last-child {
+	background-color: var(--default-blue-color);
+}
+/* Akhir Offline Pop up */
+
+/*  */
 
 a#button-to-top {
 	display: inline-block;
@@ -442,7 +516,7 @@ header .burger {
 .expertness {
 	margin-top: 10%;
 }
-.expertness p {
+.expertness .progress-style p {
 	font-size: 14px;
 	padding-top: 40px;
 	line-height: 24px;
@@ -467,6 +541,7 @@ header .burger {
 
 .expertness .see-tools {
 	font-weight: bold;
+	display: inline;
 	cursor: pointer;
 	transition: 0.2s ease;
 	will-change: color;
@@ -566,7 +641,6 @@ header .burger {
 	margin: 150px 0;
 	padding: 70px 0 60px;
 	background-color: #f0f0f042;
-	content-visibility: auto;
 }
 
 .section-five .portfolio-parallax {
@@ -1266,6 +1340,14 @@ footer .menu a:hover {
 	.error-404 img {
 		height: auto;
 		width: 225px;
+	}
+
+	.offline-popup {
+		padding: 30px 0;
+		width: 100%;
+	}
+	.offline-popup img {
+		width: 70px;
 	}
 
 	.features-section,
