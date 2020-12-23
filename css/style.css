@@ -100,14 +100,14 @@ html body.loading {
 	overflow-y: scroll;
 }
 
+.body-overlay.loading,
+.offline-popup.loading,
 .pages-render.loading,
 section.loading,
 header.loading,
 footer.loading {
 	opacity: 0;
 	display: none !important;
-	will-change: opacity;
-	will-change: display;
 }
 
 .img-loading {
@@ -1169,6 +1169,7 @@ footer .menu a:hover {
 		transition: all 0.2s ease-in-out;
 		transform: translateX(100%);
 		box-shadow: 0 -10px 20px #41414138;
+		overflow: hidden;
 	}
 	header nav ul li {
 		opacity: 0;

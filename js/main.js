@@ -1,11 +1,11 @@
 const navContainer = document.querySelector("header nav"); // Use in 3 Function
 
-if ("serviceWorker" in navigator) {
-	navigator.serviceWorker
-		.register("./service-worker.js")
-		.then(() => console.log("Service Worker Active"))
-		.catch((err) => console.log("Registration Failed", err));
-}
+// if ("serviceWorker" in navigator) {
+// 	navigator.serviceWorker
+// 		.register("./service-worker.js")
+// 		.then(() => console.log("Service Worker Active"))
+// 		.catch((err) => console.log("Registration Failed", err));
+// }
 
 const spaActivation = () => {
 	let page = window.location.hash.substr(1);
@@ -130,11 +130,13 @@ buttonToTop();
 function loading() {
 	const containerImgLoading = document.querySelector(".img-loading");
 	const body = document.querySelector("body");
+	const bodyOverlay = document.querySelector(".body-overlay");
+	const offlinePopup = document.querySelector(".offline-popup");
 	const section = document.querySelectorAll("section");
 	const footer = document.querySelector("footer");
 	const header = document.querySelector("header");
 	const pagesRender = document.querySelector(".pages-render");
-	const allSection = [body, footer, header, pagesRender];
+	const allSection = [body, bodyOverlay, offlinePopup, footer, header, pagesRender];
 
 	section.forEach((e) => allSection.push(e));
 	allSection.map((e) => e.classList.add("loading"));
@@ -172,22 +174,25 @@ const seeMoreTools = () => {
 setTimeout(() => seeMoreTools(), 2000);
 
 const cekUserOffline = () => {
-	let isOffline = navigator.onLine;
 	const bodyOverlay = document.querySelector(".body-overlay");
 	const offlinePopup = document.querySelector(".offline-popup");
 	const btnKeepMeStay = document.querySelector("button:first-child");
 	const btnGoToSetting = document.querySelector("button:last-child");
 
-	const whenButtonClick = () => {
+	const showPopup = () => {
+		bodyOverlay.classList.add("active");
+		offlinePopup.classList.add("active");
+	};
+
+	const hidePopup = () => {
 		bodyOverlay.classList.remove("active");
 		offlinePopup.classList.remove("active");
 	};
 
-	if (isOffline) {
-		bodyOverlay.classList.add("active");
-		offlinePopup.classList.add("active");
-	}
-	btnKeepMeStay.addEventListener("click", () => whenButtonClick());
-	btnGoToSetting.addEventListener("click", () => whenButtonClick());
+	window.addEventListener("online", () => hidePopup());
+	window.addEventListener("offline", () => showPopup());
+
+	btnKeepMeStay.addEventListener("click", () => hidePopup());
+	btnGoToSetting.addEventListener("click", () => hidePopup());
 };
 cekUserOffline();
