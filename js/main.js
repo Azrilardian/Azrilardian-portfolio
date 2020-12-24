@@ -177,6 +177,7 @@ const userWhenOnlineOffline = () => {
 	const bodyOverlay = document.querySelector(".body-overlay");
 	const onlinePopup = document.querySelector(".online-popup");
 	const offlinePopup = document.querySelector(".offline-popup");
+	const btnKeepStay = document.querySelector(".btn-keep-stay");
 
 	const showPopup = () => {
 		bodyOverlay.classList.add("active");
@@ -195,12 +196,6 @@ const userWhenOnlineOffline = () => {
 	});
 	window.addEventListener("offline", () => showPopup());
 
-	document.addEventListener("click", (e) => {
-		if (e.target.classList.contains("btn-keep-stay")) hidePopup();
-		if (e.target.classList.contains("offline-popup")) return;
-		else {
-			hidePopup();
-		}
-	});
+	btnKeepStay.addEventListener("click", () => hidePopup());
 };
 userWhenOnlineOffline();

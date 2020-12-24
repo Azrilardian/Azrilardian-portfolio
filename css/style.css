@@ -150,6 +150,7 @@ footer.loading {
 	content-visibility: hidden;
 	visibility: hidden;
 	filter: drop-shadow(2px 3px 7px #3838383a);
+	user-select: none;
 }
 .offline-popup.active {
 	content-visibility: auto;
@@ -189,7 +190,7 @@ footer.loading {
 
 .online-popup {
 	position: fixed;
-	bottom: -4%;
+	bottom: -5%;
 	left: 0;
 	display: inline-block;
 	width: 100vw;
@@ -202,6 +203,7 @@ footer.loading {
 	text-shadow: 2px 2px 3px #0000008a;
 	transition: 0.2s ease;
 	z-index: 9999;
+	user-select: none;
 }
 
 .online-popup.active {
@@ -555,7 +557,6 @@ header .burger {
 }
 .expertness .progress {
 	border: 3px solid #e9e9e9;
-	content-visibility: auto;
 }
 .expertness .progress-bar {
 	background-image: linear-gradient(to right, #6da0ff, var(--default-blue-color));
@@ -751,7 +752,7 @@ header .burger {
 	background-color: var(--default-blue-color);
 }
 
-.section-five .overlay {
+.portfolios-section .overlay {
 	position: fixed;
 	overflow: hidden;
 	top: 0;
@@ -764,7 +765,7 @@ header .burger {
 	height: 0;
 }
 
-.section-five .overlay:target {
+.portfolios-section .overlay:target {
 	width: auto;
 	height: auto;
 	bottom: 0;
@@ -772,7 +773,7 @@ header .burger {
 	background-color: #000000cc;
 }
 
-.section-five .overlay:target img {
+.portfolios-section .overlay:target img {
 	animation: animation 1s;
 }
 
@@ -1173,6 +1174,7 @@ footer .menu a:hover {
 	.img-loading p {
 		margin-top: 10px !important;
 	}
+
 	header nav {
 		padding: 0 20px;
 	}
@@ -1275,6 +1277,12 @@ footer .menu a:hover {
 	.img-loading p {
 		font-size: 14px;
 	}
+
+	.offline-popup img {
+		width: 160px;
+		height: auto;
+	}
+
 	header nav .logo a {
 		font-size: 19px;
 	}
@@ -1318,6 +1326,11 @@ footer .menu a:hover {
 
 	.progress-style {
 		padding: 0 30px;
+	}
+
+	.service span {
+		margin: 0;
+		font-size: 25px;
 	}
 
 	.services-section,
@@ -1374,9 +1387,6 @@ footer .menu a:hover {
 	.offline-popup {
 		padding: 30px;
 		width: 100%;
-	}
-	.offline-popup img {
-		width: 70px;
 	}
 
 	.features-section,
