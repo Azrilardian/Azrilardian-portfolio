@@ -56,6 +56,7 @@ let fileToCache = [
 	"./img/undraw_page_not_found_su7k.svg",
 	"./img/undraw_warning_cyit.svg",
 	"./img/undraw_server_down_s4lk.svg",
+	"./img/undraw_signal_searching_bhpc.svg",
 	"./img/ziggy-home.jpg",
 	"./js/Bootstrap-4.5.2/bootstrap.min.js",
 	"./js/Bootstrap-4.5.2/jquery-3.1.1.min.js",

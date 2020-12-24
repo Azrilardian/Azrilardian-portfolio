@@ -173,11 +173,10 @@ const seeMoreTools = () => {
 
 setTimeout(() => seeMoreTools(), 2000);
 
-const cekUserOffline = () => {
+const userWhenOnlineOffline = () => {
 	const bodyOverlay = document.querySelector(".body-overlay");
+	const onlinePopup = document.querySelector(".online-popup");
 	const offlinePopup = document.querySelector(".offline-popup");
-	const btnKeepMeStay = document.querySelector("button:first-child");
-	const btnGoToSetting = document.querySelector("button:last-child");
 
 	const showPopup = () => {
 		bodyOverlay.classList.add("active");
@@ -189,10 +188,19 @@ const cekUserOffline = () => {
 		offlinePopup.classList.remove("active");
 	};
 
-	window.addEventListener("online", () => hidePopup());
+	window.addEventListener("online", () => {
+		hidePopup();
+		onlinePopup.classList.add("active");
+		setTimeout(() => onlinePopup.classList.remove("active"), 3000);
+	});
 	window.addEventListener("offline", () => showPopup());
 
-	btnKeepMeStay.addEventListener("click", () => hidePopup());
-	btnGoToSetting.addEventListener("click", () => hidePopup());
+	document.addEventListener("click", (e) => {
+		if (e.target.classList.contains("btn-keep-stay")) hidePopup();
+		if (e.target.classList.contains("offline-popup")) return;
+		else {
+			hidePopup();
+		}
+	});
 };
-cekUserOffline();
+userWhenOnlineOffline();

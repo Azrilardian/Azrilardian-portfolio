@@ -140,7 +140,7 @@ footer.loading {
 	top: 100%;
 	left: 50%;
 	transform: translate(-50%, 100%);
-	padding: 40px 0;
+	padding: 40px;
 	width: 500px;
 	background-color: white;
 	z-index: 999;
@@ -158,7 +158,7 @@ footer.loading {
 }
 
 .offline-popup img {
-	width: 80px;
+	width: 140px;
 	height: auto;
 }
 
@@ -169,6 +169,7 @@ footer.loading {
 
 .offline-popup button {
 	border-radius: 10px;
+	width: 100%;
 	padding: 10px 15px;
 	margin: 5px;
 	border: 2px solid transparent;
@@ -176,19 +177,40 @@ footer.loading {
 	transition: 0.2s ease;
 	will-change: border;
 	outline: none;
+	background-color: var(--default-blue-color);
 }
 .offline-popup button:focus {
 	border: 2px solid #1c86b8;
 }
-.offline-popup button:first-child {
-	background-color: whitesmoke;
-}
-.offline-popup button:last-child {
-	background-color: var(--default-blue-color);
-}
-/* Akhir Offline Pop up */
 
-/*  */
+/* Akhir Offline Popup */
+
+/* Online Popup */
+
+.online-popup {
+	position: fixed;
+	bottom: -4%;
+	left: 0;
+	display: inline-block;
+	width: 100vw;
+	background-color: #43ff7c;
+	padding: 5px 0;
+	margin: 0;
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+	text-shadow: 2px 2px 3px #0000008a;
+	transition: 0.2s ease;
+	z-index: 9999;
+}
+
+.online-popup.active {
+	bottom: 0;
+}
+
+/* Akhir Online Popup */
+
+/* Button to top */
 
 a#button-to-top {
 	display: inline-block;
@@ -222,6 +244,8 @@ a#button-to-top.show {
 	opacity: 1;
 	visibility: visible;
 }
+
+/* Akhir Button to top */
 
 /* Navbar */
 
@@ -1288,6 +1312,10 @@ footer .menu a:hover {
 		transition: 0.3s;
 	}
 
+	.features-section .feature i {
+		font-size: 20px;
+	}
+
 	.progress-style {
 		padding: 0 30px;
 	}
@@ -1344,7 +1372,7 @@ footer .menu a:hover {
 	}
 
 	.offline-popup {
-		padding: 30px 0;
+		padding: 30px;
 		width: 100%;
 	}
 	.offline-popup img {
