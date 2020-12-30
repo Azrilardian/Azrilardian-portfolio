@@ -1,0 +1,17 @@
+{
+	"theme_color": "#2aadeb",
+	"background_color": "#2aadeb",
+	"display": "standalone",
+	"scope": "/",
+	"start_url": "/index.html",
+	"name": "Azril Ardian Portfolio",
+	"short_name": "Azril Ardian",
+	"description": "Website Portfolio Azril Ardian",
+	"icons": [
+		{
+			"src": "./img/Manifest-Icon/icon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
