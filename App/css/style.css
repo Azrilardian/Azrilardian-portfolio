@@ -1,16 +1,14 @@
 @font-face {
 	font-family: "Poppins";
-	src: url("../fonts/Poppins-Regular.ttf");
+	src: url("../fonts/poppins-regular-webfont.woff2");
 }
-
 @font-face {
 	font-family: "Source Sans Pro Light";
-	src: url("../fonts/SourceSansPro-ExtraLight.ttf");
+	src: url("../fonts/sourcesanspro-extralight-webfont.woff2");
 }
-
 @font-face {
 	font-family: "Source Sans Pro Regular";
-	src: url("../fonts/SourceSansPro-Regular.ttf");
+	src: url("../fonts/sourcesanspro-regular-webfont.woff2");
 }
 
 html body {
