@@ -192,13 +192,13 @@ footer.loading {
 	left: 0;
 	display: inline-block;
 	width: 100vw;
-	background-color: #43ff7c;
+	background-color: #06e023;
 	padding: 5px 0;
 	margin: 0;
 	color: white;
 	font-size: 14px;
 	font-weight: 500;
-	text-shadow: 2px 2px 3px #0000008a;
+	text-shadow: 2px 2px 3px #00000059;
 	transition: 0.2s ease;
 	z-index: 9999;
 	user-select: none;
@@ -339,7 +339,7 @@ a#button-to-top.show {
 	filter: drop-shadow(0 0 15px #2aaeeb);
 }
 
-.feature h3 {
+.feature h4 {
 	font-weight: 600;
 	font-size: 20px;
 	margin: 10px 0;
@@ -348,7 +348,7 @@ a#button-to-top.show {
 	will-change: color;
 }
 
-.feature div:hover h3 {
+.feature div:hover h4 {
 	color: #f8f8f8;
 }
 
@@ -516,7 +516,7 @@ a#button-to-top.show {
 	transform: translate(0, 0);
 }
 
-.portfolio-parallax h5 {
+.portfolio-parallax b {
 	font-size: 14px;
 	font-weight: 600;
 	margin-top: 10px;
@@ -921,7 +921,7 @@ a#button-to-top.show {
 	color: var(--default-blue-color);
 }
 
-.team-parallax h5 {
+.team-parallax b {
 	font-size: 16px;
 	font-weight: 700;
 	color: #1f1f1f;
