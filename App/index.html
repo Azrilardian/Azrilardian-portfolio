@@ -14,13 +14,178 @@
 		<link rel="icon" href="./favicon.ico" type="image/x-icon" />
 		<!-- Manifest -->
 		<link rel="manifest" href="./manifest.json" />
-		<link rel="stylesheet" href="../App/css/bootstrap.css" />
+
+		<style>
+			header {
+				position: sticky;
+				top: 0;
+				z-index: 99;
+				font-family: "Source Sans Pro Regular", sans-serif;
+			}
+
+			header nav {
+				min-height: 70px;
+				z-index: 999;
+				background-color: transparent;
+				transition: all 0.3s ease;
+			}
+
+			header .black {
+				background-color: #1f1f1f !important;
+				transition: all 0.3s ease-in;
+			}
+
+			header a.logo {
+				font-size: 20px;
+				font-weight: 600;
+				text-decoration: none;
+				color: white;
+				transition: 0.3s ease;
+				will-change: color;
+			}
+
+			header a:hover {
+				color: var(--default-blue-color);
+			}
+
+			header nav ul {
+				display: flex;
+				justify-content: space-between;
+				width: 580px;
+			}
+
+			header ul li a {
+				color: white;
+				font-size: 14px;
+				transition: 0.3s ease;
+			}
+
+			header .burger {
+				cursor: pointer;
+				transition: 0.3s ease;
+				display: none;
+				z-index: 999;
+			}
+
+			.burger div {
+				width: 25px;
+				height: 3px;
+				margin: 4px 0;
+				border-radius: 5px;
+				background-color: white;
+				transition: 0.3s ease;
+				will-change: background-color;
+			}
+
+			.burger:hover div {
+				background-color: var(--default-blue-color);
+			}
+
+			.jumbotron {
+				height: 100vh;
+				background: #142e3d url(../img/bg.jpg) no-repeat fixed center;
+				background-size: cover;
+				color: #fff;
+				margin-top: -70px; /* Relative mengikuti tinggi navbar */
+				font-family: "Source Sans Pro Light", sans-serif;
+			}
+
+			.content .row {
+				margin-top: 100px;
+			}
+
+			.content .col:first-child {
+				padding: 10px 0 20px;
+				margin-bottom: 10px;
+			}
+
+			.content h1 {
+				font-size: 46px;
+				line-height: 46px;
+				font-weight: 100;
+				color: var(--default-blue-color);
+			}
+
+			.content h1 span {
+				color: white;
+			}
+			.text .txt {
+				position: relative;
+			}
+
+			.text .txt::after {
+				content: "";
+				position: absolute;
+				border-right: 2px solid white;
+				height: 40px;
+				margin: 7px 0 0 5px;
+				animation: blink 0.5s infinite ease;
+			}
+
+			@keyframes blink {
+				from {
+					opacity: 0;
+				}
+				to {
+					opacity: 1;
+				}
+			}
+
+			.content a.discover-more-btn {
+				background-color: #fff;
+				border: 2px solid #fff;
+				padding: 13px 25px;
+				border-radius: 25px;
+				color: #333;
+				font-size: 12px;
+				font-weight: 600;
+				letter-spacing: 2px;
+				transition: 0.3s ease;
+				will-change: background-color;
+				will-change: border-color;
+				will-change: color;
+			}
+
+			.content a.discover-more-btn:hover {
+				background-color: transparent;
+				border-color: var(--default-blue-color);
+				color: var(--default-blue-color);
+			}
+
+			.content .down {
+				margin-top: 120px;
+			}
+
+			.content .down a {
+				font-size: 40px;
+				text-decoration: none;
+				color: #fff;
+				transition: 0.3s;
+				will-change: color;
+			}
+
+			.content .down a:hover {
+				color: var(--default-blue-color);
+			}
+		</style>
+
 		<!-- Bootstrap CSS -->
+		<!-- <link rel="stylesheet" href="../App/css/bootstrap.css" /> -->
+		<link rel="preload" href="../App/css/bootstrap.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+		<noscript><link rel="stylesheet" href="../App/css/bootstrap.css" /></noscript>
+
 		<!-- Linear Icons CSS -->
-		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
+		<!-- <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" /> -->
+		<link rel="preload" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+		<noscript><link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" /></noscript>
+
 		<!-- Font Awesome -->
-		<link rel="stylesheet" href="./css/fontawesome 5.13.0/css/all.min.css" />
-		<link rel="stylesheet" href="./css/fontawesome 5.13.0/css/v4-shims.min.css" />
+		<!-- <link rel="stylesheet" href="./css/fontawesome 5.13.0/css/all.min.css" /> -->
+		<link rel="preload" href="./css/fontawesome 5.13.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+		<noscript><link rel="stylesheet" href="./css/fontawesome 5.13.0/css/all.min.css" /></noscript>
+		<!-- <link rel="stylesheet" href="./css/fontawesome 5.13.0/css/v4-shims.min.css" /> -->
+		<link rel="preload" href="./css/fontawesome 5.13.0/css/v4-shims.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+		<noscript><link rel="stylesheet" href="./css/fontawesome 5.13.0/css/v4-shims.min.css" /></noscript>
 		<title>Azril ardian</title>
 	</head>
 
