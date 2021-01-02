@@ -268,22 +268,22 @@ a#button-to-top.show {
 	transform: translate(0);
 }
 .features-section .feature i {
-	font-size: 25px;
+	font-size: 22px;
 	color: var(--default-blue-color);
 	transition: 0.4s ease;
 }
 .features-section .feature-parallax:hover i {
 	filter: drop-shadow(0 0 15px #2aaeeb);
 }
-.feature h4 {
+.feature b {
 	font-weight: 600;
 	font-size: 20px;
-	margin: 10px 0;
 	color: #1f1f1f;
 	transition: 0.4s ease;
+	margin-left: 5px;
 	will-change: color;
 }
-.feature div:hover h4 {
+.feature div:hover b {
 	color: #f8f8f8;
 }
 .feature p {
@@ -355,7 +355,7 @@ a#button-to-top.show {
 	margin-right: 10px;
 	color: #2aadeb;
 }
-.service .text h4 {
+.service .text b {
 	font-weight: 600;
 	font-size: 20px;
 	color: #1f1f1f;
