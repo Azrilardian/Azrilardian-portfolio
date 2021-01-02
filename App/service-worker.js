@@ -8,7 +8,7 @@ let fileToCache = [
 	"./css/fontawesome 5.13.0/css/v4-shims.min.css",
 	"./css/fontawesome 5.13.0/webfonts/fa-brands-400.woff2",
 	"./css/fontawesome 5.13.0/webfonts/fa-solid-900.woff2",
-	"./js/Bootstrap-4.5.2/jquery-3.1.1.min.js",
+	"./js/jquery-3.1.1.min.js",
 	"./js/jquery.easing.1.3.js",
 	"./pages/home.html",
 	"./pages/portfolio.html",
