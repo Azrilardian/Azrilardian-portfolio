@@ -14,7 +14,6 @@
 html body {
 	font-family: "poppins", sans-serif;
 	overflow-x: hidden;
-	scroll-behavior: smooth;
 }
 
 /* Uttility */
@@ -55,7 +54,6 @@ span::selection {
 }
 .body-overlay.active {
 	background-color: #000000bd;
-	/* content-visibility: auto; */
 	visibility: visible;
 }
 
@@ -64,9 +62,11 @@ section .col.header h1 {
 }
 
 section .col.header hr {
+	box-sizing: content-box;
+	overflow: visible;
 	width: 60px;
 	height: 2px;
-	background-color: var(--default-blue-color);
+	background-color: var(--default-blue-color) !important;
 }
 
 body::-webkit-scrollbar {
