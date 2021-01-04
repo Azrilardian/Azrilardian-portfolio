@@ -1,12 +1,12 @@
 const main = () => {
 	const navContainer = document.querySelector("header nav"); // Use in 3 Function
 
-	if ("serviceWorker" in navigator) {
-		navigator.serviceWorker
-			.register("./service-worker.js")
-			.then(() => console.log("Service Worker Active"))
-			.catch((err) => console.log("Registration Failed", err));
-	}
+	// if ("serviceWorker" in navigator) {
+	// 	navigator.serviceWorker
+	// 		.register("./service-worker.js")
+	// 		.then(() => console.log("Service Worker Active"))
+	// 		.catch((err) => console.log("Registration Failed", err));
+	// }
 
 	const spaActivation = () => {
 		let page = window.location.hash.substr(1);
@@ -149,7 +149,7 @@ const main = () => {
 			setTimeout(() => {
 				containerImgLoading.remove();
 				allSection.map((e) => e.classList.remove("loading"));
-			}, 1100);
+			}, 700);
 		});
 	}
 	loading();
@@ -180,10 +180,12 @@ const main = () => {
 		const bodyOverlay = document.querySelector(".body-overlay");
 		const onlinePopup = document.querySelector(".online-popup");
 		const offlinePopup = document.querySelector(".offline-popup");
-		const btnKeepStay = document.querySelector(".btn-keep-stay");
 
 		const showPopup = () => {
 			bodyOverlay.classList.add("active");
+			offlinePopup.innerHTML = `<img src="./img/undraw_signal_searching_bhpc.svg" alt="offline-picture" />
+									  <p>Opps... Your Device is Offline</p>
+									  <button class="btn-keep-stay">Keep Me Stay</button>`;
 			offlinePopup.classList.add("active");
 		};
 
@@ -194,12 +196,15 @@ const main = () => {
 
 		window.addEventListener("online", () => {
 			hidePopup();
+			onlinePopup.textContent = `You are Online`;
 			onlinePopup.classList.add("active");
 			setTimeout(() => onlinePopup.classList.remove("active"), 3000);
 		});
 		window.addEventListener("offline", () => showPopup());
 
-		btnKeepStay.addEventListener("click", () => hidePopup());
+		document.addEventListener("click", (e) => {
+			if (e.target.classList.contains("btn-keep-stay")) e.target.addEventListener("click", hidePopup);
+		});
 	};
 	userWhenOnlineOffline();
 };

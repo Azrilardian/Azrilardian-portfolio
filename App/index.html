@@ -17,6 +17,77 @@
 		<link rel="manifest" href="./manifest.json" />
 
 		<style>
+			* {
+				padding: 0;
+				margin: 0;
+				box-sizing: border-box;
+			}
+			:root {
+				--default-blue-color: #2aadeb;
+				scrollbar-color: var(--default-blue-color) #1f1f1f;
+				scrollbar-width: thin;
+			}
+			html body {
+				overflow: hidden;
+			}
+
+			.img-loading {
+				margin: auto;
+				user-select: none;
+				height: 100vh;
+				z-index: 1000 !important;
+				transition: 0.5s ease;
+			}
+			.img-loading.loaded {
+				opacity: 0;
+			}
+			.img-loading img {
+				width: 130px;
+				height: auto;
+			}
+			.img-loading p {
+				margin-top: 10px;
+				font-weight: 600;
+			}
+
+			.offline-popup {
+				position: fixed;
+				top: 100%;
+				left: 50%;
+				transform: translate(-50%, 100%);
+				padding: 40px;
+				width: 500px;
+				background-color: #fff;
+				z-index: 999;
+				border-top-left-radius: 20px;
+				border-top-right-radius: 20px;
+				transition: 0.3s ease;
+				content-visibility: hidden;
+				visibility: hidden;
+				filter: drop-shadow(2px 3px 7px #3838383a);
+				user-select: none;
+			}
+
+			.online-popup {
+				position: fixed;
+				bottom: -5%;
+				left: 0;
+				display: inline-block;
+				width: 100vw;
+				content-visibility: hidden;
+				visibility: hidden;
+				background-color: #00640a;
+				padding: 5px 0;
+				margin: 0;
+				color: #fff;
+				font-size: 14px;
+				font-weight: 500;
+				text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.34901960784313724);
+				transition: 0.2s ease;
+				z-index: 9999;
+				user-select: none;
+			}
+
 			header {
 				position: sticky;
 				top: 0;
@@ -60,6 +131,7 @@
 				color: white;
 				font-size: 14px;
 				transition: 0.3s ease;
+				text-decoration: none;
 			}
 
 			header .burger {
@@ -135,6 +207,7 @@
 
 			.content a.discover-more-btn {
 				background-color: #fff;
+				text-decoration: none;
 				border: 2px solid #fff;
 				padding: 13px 25px;
 				border-radius: 25px;
@@ -171,14 +244,14 @@
 			}
 		</style>
 
+		<!-- Style CSS -->
+		<link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+		<noscript><link rel="stylesheet" href="./css/style.css" /></noscript>
+
 		<!-- Bootstrap CSS -->
 		<!-- <link rel="stylesheet" href="../App/css/bootstrap.min.css" /> -->
 		<link rel="preload" href="./css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 		<noscript><link rel="stylesheet" href="./css/bootstrap.min.css" /></noscript>
-
-		<!-- Style CSS -->
-		<link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-		<noscript><link rel="stylesheet" href="./css/style.css" /></noscript>
 
 		<!-- Linear Icons CSS -->
 		<!-- <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" /> -->
@@ -210,15 +283,11 @@
 		<!-- AKHIR LOADING -->
 
 		<!-- USER OFFLINE POPUP -->
-		<div class="offline-popup d-flex flex-column justify-content-center align-items-center">
-			<img src="./img/undraw_signal_searching_bhpc.svg" alt="offline-picture" />
-			<p>Opps... Your Device is Offline</p>
-			<button class="btn-keep-stay">Keep Me Stay</button>
-		</div>
+		<div class="offline-popup d-flex flex-column justify-content-center align-items-center"></div>
 		<!-- AKHIR USER OFFLINE POPUP -->
 
 		<!-- USER ONLINE POPUP  -->
-		<p class="online-popup text-center">You are Online</p>
+		<p class="online-popup text-center"></p>
 		<!-- AKHIR USER ONLINE POPUP  -->
 
 		<!-- NAVBAR -->
