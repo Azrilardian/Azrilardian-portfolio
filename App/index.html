@@ -30,7 +30,6 @@
 			html body {
 				overflow: hidden;
 			}
-
 			.img-loading {
 				margin: auto;
 				user-select: none;
@@ -49,7 +48,6 @@
 				margin-top: 10px;
 				font-weight: 600;
 			}
-
 			.offline-popup {
 				position: fixed;
 				top: 100%;
@@ -67,7 +65,6 @@
 				filter: drop-shadow(2px 3px 7px #3838383a);
 				user-select: none;
 			}
-
 			.online-popup {
 				position: fixed;
 				bottom: -5%;
@@ -87,115 +84,98 @@
 				z-index: 9999;
 				user-select: none;
 			}
-
 			header {
 				position: sticky;
 				top: 0;
 				z-index: 99;
 				font-family: "Source Sans Pro Regular", sans-serif;
 			}
-
 			header nav {
 				min-height: 70px;
 				z-index: 999;
 				background-color: transparent;
 				transition: all 0.3s ease;
 			}
-
 			header .black {
 				background-color: #1f1f1f !important;
 				transition: all 0.3s ease-in;
 			}
-
 			header a.logo {
 				font-size: 20px;
 				font-weight: 600;
 				text-decoration: none;
-				color: white;
+				color: #fff;
 				transition: 0.3s ease;
 				will-change: color;
 			}
-
 			header a:hover {
 				color: var(--default-blue-color);
 			}
-
 			header nav ul {
 				display: flex;
 				justify-content: space-between;
 				list-style-type: none;
 				width: 580px;
 			}
-
 			header ul li a {
-				color: white;
+				color: #fff;
 				font-size: 14px;
 				transition: 0.3s ease;
 				text-decoration: none;
 			}
-
 			header .burger {
 				cursor: pointer;
 				transition: 0.3s ease;
 				display: none;
 				z-index: 999;
 			}
-
 			.burger div {
 				width: 25px;
 				height: 3px;
 				margin: 4px 0;
 				border-radius: 5px;
-				background-color: white;
+				background-color: #fff;
 				transition: 0.3s ease;
 				will-change: background-color;
 			}
-
 			.burger:hover div {
 				background-color: var(--default-blue-color);
 			}
-
 			.jumbotron {
 				height: 100vh;
-				background: #142e3d url(./img/bg.jpg) no-repeat fixed center;
+				background: #142e3d url(img/bg.jpg) no-repeat fixed center;
 				background-size: cover;
 				color: #fff;
 				margin-top: -70px;
 				font-family: "Source Sans Pro Light", sans-serif;
 			}
-
 			.content .row {
 				margin-top: 100px;
 			}
-
 			.content .col:first-child {
 				padding: 10px 0 20px;
 				margin-bottom: 10px;
 			}
-
 			.content h1 {
 				font-size: 46px;
 				line-height: 46px;
 				font-weight: 100;
 				color: var(--default-blue-color);
 			}
-
 			.content h1 span {
-				color: white;
+				color: #fff;
 			}
 			.text .txt {
 				position: relative;
 			}
-
 			.text .txt::after {
 				content: "";
 				position: absolute;
-				border-right: 2px solid white;
+				border-right: 2px solid #fff;
 				height: 40px;
 				margin: 7px 0 0 5px;
 				animation: blink 0.5s infinite ease;
 			}
-
 			@keyframes blink {
 				from {
 					opacity: 0;
@@ -204,7 +184,6 @@
 					opacity: 1;
 				}
 			}
-
 			.content a.discover-more-btn {
 				background-color: #fff;
 				text-decoration: none;
@@ -220,17 +199,14 @@
 				will-change: border-color;
 				will-change: color;
 			}
-
 			.content a.discover-more-btn:hover {
 				background-color: transparent;
 				border-color: var(--default-blue-color);
 				color: var(--default-blue-color);
 			}
-
 			.content .down {
 				margin-top: 120px;
 			}
-
 			.content .down a {
 				font-size: 40px;
 				text-decoration: none;
@@ -238,7 +214,6 @@
 				transition: 0.3s;
 				will-change: color;
 			}
-
 			.content .down a:hover {
 				color: var(--default-blue-color);
 			}

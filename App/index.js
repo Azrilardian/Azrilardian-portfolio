@@ -9,7 +9,7 @@ import scrollEffectSkills from "./js/scrollEffectSkills";
 
 document.addEventListener("DOMContentLoaded", () => {
 	main();
-	typeWritterEffect();
+	if (document.querySelector(".jumbotron")) typeWritterEffect();
 	scrollEffect();
 	scrollEffectCertificate();
 	scrollEffectPortfolio();
