@@ -11,6 +11,7 @@ Website portofolio ini dibuat sekitar bulan januari - februari 2020 dan masih te
 
 -   Html
 -   Css
+-   Sass
 -   Bootstrap
 -   Javascript
 
